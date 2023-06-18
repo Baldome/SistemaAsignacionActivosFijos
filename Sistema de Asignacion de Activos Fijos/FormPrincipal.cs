@@ -131,12 +131,12 @@ namespace Sistema_de_Asignacion_de_Activos_Fijos
 
         private void btnDevolucionEquipos_Click(object sender, EventArgs e)
         {
-
+            abrirFormulariosEnPanelPrinicipal(new FormDevolucion());
         }
 
         private void btnEquipos_Click(object sender, EventArgs e)
         {
-
+            abrirFormulariosEnPanelPrinicipal(new FormEquiposAsignados());
         }
 
         private void btnMenuEmpleados_Click(object sender, EventArgs e)
@@ -146,7 +146,7 @@ namespace Sistema_de_Asignacion_de_Activos_Fijos
 
         private void btnEmpleados_Click(object sender, EventArgs e)
         {
-
+            abrirFormulariosEnPanelPrinicipal(new FormEmpleados());
         }
 
         private void btnCargos_Click(object sender, EventArgs e)
@@ -174,15 +174,14 @@ namespace Sistema_de_Asignacion_de_Activos_Fijos
             ocultarSubMenu();
         }
 
-        private void ipbInicio_Click(object sender, EventArgs e)
+        private void pictureBoxInicio_Click(object sender, EventArgs e)
         {
             ocultarSubMenu();
-            if(formularioActivo != null)
+            if (formularioActivo != null)
             {
                 formularioActivo.Close();
             }
             panelContenedor.BringToFront();
         }
-
     }
 }

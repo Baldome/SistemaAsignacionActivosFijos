@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.panelSuperior = new System.Windows.Forms.Panel();
             this.ipbLogin = new FontAwesome.Sharp.IconPictureBox();
             this.lblLogin = new System.Windows.Forms.Label();
@@ -49,12 +50,11 @@
             this.btnEmpleados = new FontAwesome.Sharp.IconButton();
             this.btnMenuEmpleados = new FontAwesome.Sharp.IconButton();
             this.panelEquiposSubMenu = new System.Windows.Forms.Panel();
-            this.btnEquipos = new FontAwesome.Sharp.IconButton();
+            this.btnEquiposAsignados = new FontAwesome.Sharp.IconButton();
             this.btnDevolucionEquipos = new FontAwesome.Sharp.IconButton();
             this.btnAsignarEquipos = new FontAwesome.Sharp.IconButton();
             this.btnMenuEquipos = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.ipbInicio = new FontAwesome.Sharp.IconPictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.groupBoxEstadisticas = new System.Windows.Forms.GroupBox();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -67,6 +67,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblFrmActual = new System.Windows.Forms.Label();
+            this.pictureBoxInicio = new System.Windows.Forms.PictureBox();
             this.panelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ipbLogin)).BeginInit();
             this.panelMenu.SuspendLayout();
@@ -74,13 +75,13 @@
             this.panelEmpleadosSubMenu.SuspendLayout();
             this.panelEquiposSubMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ipbInicio)).BeginInit();
             this.panelContenedor.SuspendLayout();
             this.groupBoxEstadisticas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.groupBoxEmpleados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxFormActual)).BeginInit();
             this.groupBoxEquipos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInicio)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSuperior
@@ -131,6 +132,7 @@
             // btnMinimizar
             // 
             this.btnMinimizar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimizar.ForeColor = System.Drawing.Color.White;
             this.btnMinimizar.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
@@ -147,6 +149,7 @@
             // btnMaximizar
             // 
             this.btnMaximizar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMaximizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
             this.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaximizar.ForeColor = System.Drawing.Color.White;
             this.btnMaximizar.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
@@ -163,6 +166,7 @@
             // btnCerrar
             // 
             this.btnCerrar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.ForeColor = System.Drawing.Color.White;
             this.btnCerrar.IconChar = FontAwesome.Sharp.IconChar.X;
@@ -394,7 +398,7 @@
             // panelEquiposSubMenu
             // 
             this.panelEquiposSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.panelEquiposSubMenu.Controls.Add(this.btnEquipos);
+            this.panelEquiposSubMenu.Controls.Add(this.btnEquiposAsignados);
             this.panelEquiposSubMenu.Controls.Add(this.btnDevolucionEquipos);
             this.panelEquiposSubMenu.Controls.Add(this.btnAsignarEquipos);
             this.panelEquiposSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
@@ -403,28 +407,28 @@
             this.panelEquiposSubMenu.Size = new System.Drawing.Size(223, 125);
             this.panelEquiposSubMenu.TabIndex = 5;
             // 
-            // btnEquipos
+            // btnEquiposAsignados
             // 
-            this.btnEquipos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEquipos.FlatAppearance.BorderSize = 0;
-            this.btnEquipos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEquipos.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEquipos.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnEquipos.IconChar = FontAwesome.Sharp.IconChar.DesktopAlt;
-            this.btnEquipos.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.btnEquipos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEquipos.IconSize = 25;
-            this.btnEquipos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEquipos.Location = new System.Drawing.Point(0, 80);
-            this.btnEquipos.Name = "btnEquipos";
-            this.btnEquipos.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnEquipos.Size = new System.Drawing.Size(223, 40);
-            this.btnEquipos.TabIndex = 2;
-            this.btnEquipos.Text = "Equipos";
-            this.btnEquipos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEquipos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEquipos.UseVisualStyleBackColor = true;
-            this.btnEquipos.Click += new System.EventHandler(this.btnEquipos_Click);
+            this.btnEquiposAsignados.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEquiposAsignados.FlatAppearance.BorderSize = 0;
+            this.btnEquiposAsignados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEquiposAsignados.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEquiposAsignados.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnEquiposAsignados.IconChar = FontAwesome.Sharp.IconChar.DesktopAlt;
+            this.btnEquiposAsignados.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.btnEquiposAsignados.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEquiposAsignados.IconSize = 25;
+            this.btnEquiposAsignados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEquiposAsignados.Location = new System.Drawing.Point(0, 80);
+            this.btnEquiposAsignados.Name = "btnEquiposAsignados";
+            this.btnEquiposAsignados.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnEquiposAsignados.Size = new System.Drawing.Size(223, 40);
+            this.btnEquiposAsignados.TabIndex = 2;
+            this.btnEquiposAsignados.Text = "Equipos Asignados";
+            this.btnEquiposAsignados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEquiposAsignados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEquiposAsignados.UseVisualStyleBackColor = true;
+            this.btnEquiposAsignados.Click += new System.EventHandler(this.btnEquipos_Click);
             // 
             // btnDevolucionEquipos
             // 
@@ -433,7 +437,7 @@
             this.btnDevolucionEquipos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDevolucionEquipos.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDevolucionEquipos.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnDevolucionEquipos.IconChar = FontAwesome.Sharp.IconChar.ArrowsTurnRight;
+            this.btnDevolucionEquipos.IconChar = FontAwesome.Sharp.IconChar.RotateBackward;
             this.btnDevolucionEquipos.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
             this.btnDevolucionEquipos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDevolucionEquipos.IconSize = 25;
@@ -498,27 +502,12 @@
             // panelLogo
             // 
             this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(34)))), ((int)(((byte)(57)))));
-            this.panelLogo.Controls.Add(this.ipbInicio);
+            this.panelLogo.Controls.Add(this.pictureBoxInicio);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(223, 140);
             this.panelLogo.TabIndex = 3;
-            // 
-            // ipbInicio
-            // 
-            this.ipbInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(34)))), ((int)(((byte)(57)))));
-            this.ipbInicio.IconChar = FontAwesome.Sharp.IconChar.PhoenixSquadron;
-            this.ipbInicio.IconColor = System.Drawing.Color.White;
-            this.ipbInicio.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ipbInicio.IconSize = 102;
-            this.ipbInicio.Location = new System.Drawing.Point(42, 13);
-            this.ipbInicio.Name = "ipbInicio";
-            this.ipbInicio.Size = new System.Drawing.Size(110, 102);
-            this.ipbInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ipbInicio.TabIndex = 1;
-            this.ipbInicio.TabStop = false;
-            this.ipbInicio.Click += new System.EventHandler(this.ipbInicio_Click);
             // 
             // panelContenedor
             // 
@@ -557,16 +546,16 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.chart1.BackColor = System.Drawing.Color.Transparent;
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea5.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chart1.Legends.Add(legend5);
             this.chart1.Location = new System.Drawing.Point(37, 18);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.chart1.Series.Add(series5);
             this.chart1.Size = new System.Drawing.Size(644, 258);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -680,6 +669,17 @@
             this.lblFrmActual.Text = "Dashboard";
             this.lblFrmActual.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pictureBoxInicio
+            // 
+            this.pictureBoxInicio.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInicio.Image")));
+            this.pictureBoxInicio.Location = new System.Drawing.Point(44, 0);
+            this.pictureBoxInicio.Name = "pictureBoxInicio";
+            this.pictureBoxInicio.Size = new System.Drawing.Size(140, 140);
+            this.pictureBoxInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxInicio.TabIndex = 1;
+            this.pictureBoxInicio.TabStop = false;
+            this.pictureBoxInicio.Click += new System.EventHandler(this.pictureBoxInicio_Click);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -689,6 +689,7 @@
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panelSuperior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1000, 600);
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -701,7 +702,6 @@
             this.panelEmpleadosSubMenu.ResumeLayout(false);
             this.panelEquiposSubMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ipbInicio)).EndInit();
             this.panelContenedor.ResumeLayout(false);
             this.panelContenedor.PerformLayout();
             this.groupBoxEstadisticas.ResumeLayout(false);
@@ -711,6 +711,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxFormActual)).EndInit();
             this.groupBoxEquipos.ResumeLayout(false);
             this.groupBoxEquipos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInicio)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -735,12 +736,11 @@
         private FontAwesome.Sharp.IconButton btnEmpleados;
         private FontAwesome.Sharp.IconButton btnMenuEmpleados;
         private System.Windows.Forms.Panel panelEquiposSubMenu;
-        private FontAwesome.Sharp.IconButton btnEquipos;
+        private FontAwesome.Sharp.IconButton btnEquiposAsignados;
         private FontAwesome.Sharp.IconButton btnDevolucionEquipos;
         private FontAwesome.Sharp.IconButton btnAsignarEquipos;
         private FontAwesome.Sharp.IconButton btnMenuEquipos;
         private System.Windows.Forms.Panel panelLogo;
-        private FontAwesome.Sharp.IconPictureBox ipbInicio;
         private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.GroupBox groupBoxEquipos;
         private System.Windows.Forms.Label lblFrmActual;
@@ -753,5 +753,6 @@
         private System.Windows.Forms.Label labelTotalEmpleados;
         private System.Windows.Forms.GroupBox groupBoxEstadisticas;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.PictureBox pictureBoxInicio;
     }
 }
