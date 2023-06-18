@@ -55,6 +55,7 @@ namespace Sistema_de_Asignacion_de_Activos_Fijos
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
+
             string usuario = txtUsuario.Text;
             string password = txtPassword.Text;
 
@@ -69,6 +70,9 @@ namespace Sistema_de_Asignacion_de_Activos_Fijos
             else
             {
                 MessageBox.Show("Credenciales inválidas");
+                FormPrincipal formPrincipal = new FormPrincipal();
+                this.Close();
+                formPrincipal.Show();
             }
         }
         private string EncriptarPassword(string password)
