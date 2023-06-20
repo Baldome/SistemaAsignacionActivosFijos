@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace Sistema_de_Asignacion_de_Activos_Fijos
 {
-    public partial class FormAsignacion : Form
+    public partial class FormOficinas : Form
     {
-        public FormAsignacion()
+        public FormOficinas()
         {
             InitializeComponent();
-        }
-
-        private void btnBuscarEquipo_Click(object sender, EventArgs e)
-        {
-            FormLIstadoInventario formLIstadoInventario = new FormLIstadoInventario();
-            formLIstadoInventario.ShowDialog();
         }
     }
 }

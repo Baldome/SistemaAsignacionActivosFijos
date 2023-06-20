@@ -16,7 +16,7 @@ namespace Sistema_de_Asignacion_de_Activos_Fijos
     public partial class FormLogin : Form
     {
 
-        private string connectionString = "Data Source=MAXIMO;Initial Catalog=BDPROYECTO;Integrated Security=True";
+        ConexionDB conexionDB = new ConexionDB();
 
         public FormLogin()
         {
@@ -56,56 +56,52 @@ namespace Sistema_de_Asignacion_de_Activos_Fijos
         private void btnAcceder_Click(object sender, EventArgs e)
         {
 
-            string usuario = txtUsuario.Text;
-            string password = txtPassword.Text;
+            string usuario = txtUsuario.Texts;
+            string password = txtPassword.Texts;
 
             // Encriptar la contraseña ingresada
-            string passwordEncriptada = EncriptarPassword(password);
+            //string passwordEncriptada = EncriptarPassword(password);
+
+            //MessageBox.Show("passwordEncriptada: " + passwordEncriptada);
 
             // Realizar la comprobación de inicio de sesión
-            if (ValidarCredenciales(usuario, passwordEncriptada))
+            if (ValidarCredenciales(usuario, password))
             {
                 MessageBox.Show("Inicio de sesión exitoso");
+                FormPrincipal formPrincipal = new FormPrincipal();
+                this.Hide();
+                formPrincipal.Show();
             }
             else
             {
-                MessageBox.Show("Credenciales inválidas");
-                FormPrincipal formPrincipal = new FormPrincipal();
-                this.Close();
-                formPrincipal.Show();
+                MessageBox.Show("Credenciales inválidas usuario y password no existe");
             }
         }
+
         private string EncriptarPassword(string password)
         {
-            using (SHA256 sha256Hash = SHA256.Create())
+            using (SHA256 sha256 = SHA256.Create())
             {
-                // Convertir la contraseña en un arreglo de bytes
-                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(password));
-
-                // Convertir los bytes en una cadena hexadecimal
-                StringBuilder builder = new StringBuilder();
-                for (int i = 0; i < bytes.Length; i++)
-                {
-                    builder.Append(bytes[i].ToString("x2"));
-                }
-
-                return builder.ToString();
+                byte[] bytes = Encoding.UTF8.GetBytes(password);
+                byte[] hash = sha256.ComputeHash(bytes);
+                return BitConverter.ToString(hash).Replace("-", "");
             }
         }
-        private bool ValidarCredenciales(string usuario, string passwordEncriptada)
+        private bool ValidarCredenciales(string usuario, string password)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = conexionDB.getConexion())
             {
-                string query = "SELECT COUNT(*) FROM Usuarios WHERE USUARIO = @Usuario AND PASSWORD = @Password";
+                connection.Open();
+                string query = "SELECT * FROM Usuarios WHERE USUARIO = @Usuario AND PASSWORD = @Password";
 
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@Usuario", usuario);
-                command.Parameters.AddWithValue("@Password", passwordEncriptada);
+                command.Parameters.AddWithValue("@Password", password);
 
-                connection.Open();
-                int count = (int)command.ExecuteScalar();
-
-                return count > 0;
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    return reader.Read(); // Devuelve true si hay filas coincidentes, de lo contrario, devuelve false
+                }
             }
         }
     }

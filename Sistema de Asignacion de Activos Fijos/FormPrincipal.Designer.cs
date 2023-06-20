@@ -28,11 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.panelSuperior = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ipbLogin = new FontAwesome.Sharp.IconPictureBox();
             this.lblLogin = new System.Windows.Forms.Label();
             this.btnMinimizar = new FontAwesome.Sharp.IconButton();
@@ -55,38 +53,43 @@
             this.btnAsignarEquipos = new FontAwesome.Sharp.IconButton();
             this.btnMenuEquipos = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.pictureBoxInicio = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.groupBoxEstadisticas = new System.Windows.Forms.GroupBox();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.groupBoxCódigosQR = new System.Windows.Forms.GroupBox();
+            this.pictureBoxContenidoQR = new System.Windows.Forms.PictureBox();
+            this.btnGenerarQR = new FontAwesome.Sharp.IconButton();
             this.groupBoxEmpleados = new System.Windows.Forms.GroupBox();
             this.labelTotalEmpleados = new System.Windows.Forms.Label();
             this.iconPictureBoxFormActual = new FontAwesome.Sharp.IconPictureBox();
             this.groupBoxEquipos = new System.Windows.Forms.GroupBox();
+            this.labelTotalInventario = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.labelNoAsignados = new System.Windows.Forms.Label();
             this.labelAsignados = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblFrmActual = new System.Windows.Forms.Label();
-            this.pictureBoxInicio = new System.Windows.Forms.PictureBox();
             this.panelSuperior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ipbLogin)).BeginInit();
             this.panelMenu.SuspendLayout();
             this.panelOficinasSubMenu.SuspendLayout();
             this.panelEmpleadosSubMenu.SuspendLayout();
             this.panelEquiposSubMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInicio)).BeginInit();
             this.panelContenedor.SuspendLayout();
-            this.groupBoxEstadisticas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.groupBoxCódigosQR.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxContenidoQR)).BeginInit();
             this.groupBoxEmpleados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxFormActual)).BeginInit();
             this.groupBoxEquipos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInicio)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSuperior
             // 
             this.panelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(34)))), ((int)(((byte)(57)))));
+            this.panelSuperior.Controls.Add(this.pictureBox1);
             this.panelSuperior.Controls.Add(this.ipbLogin);
             this.panelSuperior.Controls.Add(this.lblLogin);
             this.panelSuperior.Controls.Add(this.btnMinimizar);
@@ -99,6 +102,16 @@
             this.panelSuperior.Size = new System.Drawing.Size(1000, 35);
             this.panelSuperior.TabIndex = 1;
             this.panelSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelSuperior_MouseDown);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // ipbLogin
             // 
@@ -134,7 +147,7 @@
             this.btnMinimizar.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizar.ForeColor = System.Drawing.Color.White;
+            this.btnMinimizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(34)))), ((int)(((byte)(57)))));
             this.btnMinimizar.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
             this.btnMinimizar.IconColor = System.Drawing.Color.White;
             this.btnMinimizar.IconFont = FontAwesome.Sharp.IconFont.Solid;
@@ -151,7 +164,7 @@
             this.btnMaximizar.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnMaximizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
             this.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaximizar.ForeColor = System.Drawing.Color.White;
+            this.btnMaximizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(34)))), ((int)(((byte)(57)))));
             this.btnMaximizar.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
             this.btnMaximizar.IconColor = System.Drawing.Color.White;
             this.btnMaximizar.IconFont = FontAwesome.Sharp.IconFont.Solid;
@@ -168,7 +181,7 @@
             this.btnCerrar.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.ForeColor = System.Drawing.Color.White;
+            this.btnCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(34)))), ((int)(((byte)(57)))));
             this.btnCerrar.IconChar = FontAwesome.Sharp.IconChar.X;
             this.btnCerrar.IconColor = System.Drawing.Color.White;
             this.btnCerrar.IconFont = FontAwesome.Sharp.IconFont.Solid;
@@ -187,7 +200,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(3, 7);
+            this.label1.Location = new System.Drawing.Point(42, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(241, 19);
             this.label1.TabIndex = 0;
@@ -219,7 +232,7 @@
             this.btnPartidaMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPartidaMenu.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPartidaMenu.ForeColor = System.Drawing.Color.White;
-            this.btnPartidaMenu.IconChar = FontAwesome.Sharp.IconChar.Anchor;
+            this.btnPartidaMenu.IconChar = FontAwesome.Sharp.IconChar.Table;
             this.btnPartidaMenu.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(99)))), ((int)(((byte)(228)))));
             this.btnPartidaMenu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPartidaMenu.IconSize = 40;
@@ -253,7 +266,7 @@
             this.btnEncargados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEncargados.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEncargados.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnEncargados.IconChar = FontAwesome.Sharp.IconChar.FileArrowUp;
+            this.btnEncargados.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
             this.btnEncargados.IconColor = System.Drawing.Color.BurlyWood;
             this.btnEncargados.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEncargados.IconSize = 25;
@@ -509,10 +522,21 @@
             this.panelLogo.Size = new System.Drawing.Size(223, 140);
             this.panelLogo.TabIndex = 3;
             // 
+            // pictureBoxInicio
+            // 
+            this.pictureBoxInicio.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInicio.Image")));
+            this.pictureBoxInicio.Location = new System.Drawing.Point(44, 0);
+            this.pictureBoxInicio.Name = "pictureBoxInicio";
+            this.pictureBoxInicio.Size = new System.Drawing.Size(140, 140);
+            this.pictureBoxInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxInicio.TabIndex = 1;
+            this.pictureBoxInicio.TabStop = false;
+            this.pictureBoxInicio.Click += new System.EventHandler(this.pictureBoxInicio_Click);
+            // 
             // panelContenedor
             // 
             this.panelContenedor.BackColor = System.Drawing.Color.White;
-            this.panelContenedor.Controls.Add(this.groupBoxEstadisticas);
+            this.panelContenedor.Controls.Add(this.groupBoxCódigosQR);
             this.panelContenedor.Controls.Add(this.groupBoxEmpleados);
             this.panelContenedor.Controls.Add(this.iconPictureBoxFormActual);
             this.panelContenedor.Controls.Add(this.groupBoxEquipos);
@@ -524,53 +548,66 @@
             this.panelContenedor.Size = new System.Drawing.Size(760, 565);
             this.panelContenedor.TabIndex = 5;
             // 
-            // groupBoxEstadisticas
+            // groupBoxCódigosQR
             // 
-            this.groupBoxEstadisticas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.groupBoxCódigosQR.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBoxEstadisticas.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.groupBoxEstadisticas.Controls.Add(this.chart1);
-            this.groupBoxEstadisticas.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxEstadisticas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(34)))), ((int)(((byte)(57)))));
-            this.groupBoxEstadisticas.Location = new System.Drawing.Point(17, 258);
-            this.groupBoxEstadisticas.Name = "groupBoxEstadisticas";
-            this.groupBoxEstadisticas.Size = new System.Drawing.Size(718, 294);
-            this.groupBoxEstadisticas.TabIndex = 11;
-            this.groupBoxEstadisticas.TabStop = false;
-            this.groupBoxEstadisticas.Text = "Estadisticas";
+            this.groupBoxCódigosQR.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.groupBoxCódigosQR.Controls.Add(this.pictureBoxContenidoQR);
+            this.groupBoxCódigosQR.Controls.Add(this.btnGenerarQR);
+            this.groupBoxCódigosQR.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxCódigosQR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(34)))), ((int)(((byte)(57)))));
+            this.groupBoxCódigosQR.Location = new System.Drawing.Point(17, 258);
+            this.groupBoxCódigosQR.Name = "groupBoxCódigosQR";
+            this.groupBoxCódigosQR.Size = new System.Drawing.Size(718, 294);
+            this.groupBoxCódigosQR.TabIndex = 11;
+            this.groupBoxCódigosQR.TabStop = false;
+            this.groupBoxCódigosQR.Text = "Generador de código QR Inventario asignado";
             // 
-            // chart1
+            // pictureBoxContenidoQR
             // 
-            this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.chart1.BackColor = System.Drawing.Color.Transparent;
-            chartArea5.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chart1.Legends.Add(legend5);
-            this.chart1.Location = new System.Drawing.Point(37, 18);
-            this.chart1.Name = "chart1";
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.chart1.Series.Add(series5);
-            this.chart1.Size = new System.Drawing.Size(644, 258);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
+            this.pictureBoxContenidoQR.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxContenidoQR.Location = new System.Drawing.Point(369, 24);
+            this.pictureBoxContenidoQR.Name = "pictureBoxContenidoQR";
+            this.pictureBoxContenidoQR.Size = new System.Drawing.Size(260, 260);
+            this.pictureBoxContenidoQR.TabIndex = 7;
+            this.pictureBoxContenidoQR.TabStop = false;
+            // 
+            // btnGenerarQR
+            // 
+            this.btnGenerarQR.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnGenerarQR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(34)))), ((int)(((byte)(57)))));
+            this.btnGenerarQR.FlatAppearance.BorderSize = 0;
+            this.btnGenerarQR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerarQR.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerarQR.ForeColor = System.Drawing.Color.White;
+            this.btnGenerarQR.IconChar = FontAwesome.Sharp.IconChar.Qrcode;
+            this.btnGenerarQR.IconColor = System.Drawing.Color.White;
+            this.btnGenerarQR.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGenerarQR.IconSize = 30;
+            this.btnGenerarQR.Location = new System.Drawing.Point(85, 121);
+            this.btnGenerarQR.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnGenerarQR.Name = "btnGenerarQR";
+            this.btnGenerarQR.Padding = new System.Windows.Forms.Padding(6);
+            this.btnGenerarQR.Size = new System.Drawing.Size(189, 50);
+            this.btnGenerarQR.TabIndex = 6;
+            this.btnGenerarQR.Text = "   Generar QR";
+            this.btnGenerarQR.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGenerarQR.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGenerarQR.UseVisualStyleBackColor = false;
+            this.btnGenerarQR.Click += new System.EventHandler(this.btnGenerarQR_Click);
             // 
             // groupBoxEmpleados
             // 
-            this.groupBoxEmpleados.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxEmpleados.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxEmpleados.BackColor = System.Drawing.Color.LightSalmon;
             this.groupBoxEmpleados.Controls.Add(this.labelTotalEmpleados);
             this.groupBoxEmpleados.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxEmpleados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(34)))), ((int)(((byte)(57)))));
-            this.groupBoxEmpleados.Location = new System.Drawing.Point(535, 67);
+            this.groupBoxEmpleados.Location = new System.Drawing.Point(490, 67);
             this.groupBoxEmpleados.Name = "groupBoxEmpleados";
-            this.groupBoxEmpleados.Size = new System.Drawing.Size(202, 177);
+            this.groupBoxEmpleados.Size = new System.Drawing.Size(247, 177);
             this.groupBoxEmpleados.TabIndex = 11;
             this.groupBoxEmpleados.TabStop = false;
             this.groupBoxEmpleados.Text = "Total Empleados";
@@ -580,7 +617,7 @@
             this.labelTotalEmpleados.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTotalEmpleados.AutoSize = true;
             this.labelTotalEmpleados.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotalEmpleados.Location = new System.Drawing.Point(84, 76);
+            this.labelTotalEmpleados.Location = new System.Drawing.Point(106, 76);
             this.labelTotalEmpleados.Name = "labelTotalEmpleados";
             this.labelTotalEmpleados.Size = new System.Drawing.Size(24, 25);
             this.labelTotalEmpleados.TabIndex = 2;
@@ -603,7 +640,11 @@
             // 
             // groupBoxEquipos
             // 
+            this.groupBoxEquipos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxEquipos.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBoxEquipos.Controls.Add(this.labelTotalInventario);
+            this.groupBoxEquipos.Controls.Add(this.label5);
             this.groupBoxEquipos.Controls.Add(this.labelNoAsignados);
             this.groupBoxEquipos.Controls.Add(this.labelAsignados);
             this.groupBoxEquipos.Controls.Add(this.label3);
@@ -612,16 +653,36 @@
             this.groupBoxEquipos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(34)))), ((int)(((byte)(57)))));
             this.groupBoxEquipos.Location = new System.Drawing.Point(17, 67);
             this.groupBoxEquipos.Name = "groupBoxEquipos";
-            this.groupBoxEquipos.Size = new System.Drawing.Size(508, 177);
+            this.groupBoxEquipos.Size = new System.Drawing.Size(453, 177);
             this.groupBoxEquipos.TabIndex = 10;
             this.groupBoxEquipos.TabStop = false;
-            this.groupBoxEquipos.Text = "Total Equipos";
+            this.groupBoxEquipos.Text = "Inventario";
+            // 
+            // labelTotalInventario
+            // 
+            this.labelTotalInventario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelTotalInventario.AutoSize = true;
+            this.labelTotalInventario.Location = new System.Drawing.Point(163, 82);
+            this.labelTotalInventario.Name = "labelTotalInventario";
+            this.labelTotalInventario.Size = new System.Drawing.Size(18, 19);
+            this.labelTotalInventario.TabIndex = 5;
+            this.labelTotalInventario.Text = "0";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(4, 82);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(135, 19);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Total Inventario:";
             // 
             // labelNoAsignados
             // 
             this.labelNoAsignados.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelNoAsignados.AutoSize = true;
-            this.labelNoAsignados.Location = new System.Drawing.Point(298, 107);
+            this.labelNoAsignados.Location = new System.Drawing.Point(426, 107);
             this.labelNoAsignados.Name = "labelNoAsignados";
             this.labelNoAsignados.Size = new System.Drawing.Size(18, 19);
             this.labelNoAsignados.TabIndex = 3;
@@ -631,7 +692,7 @@
             // 
             this.labelAsignados.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelAsignados.AutoSize = true;
-            this.labelAsignados.Location = new System.Drawing.Point(298, 57);
+            this.labelAsignados.Location = new System.Drawing.Point(426, 57);
             this.labelAsignados.Name = "labelAsignados";
             this.labelAsignados.Size = new System.Drawing.Size(18, 19);
             this.labelAsignados.TabIndex = 2;
@@ -641,7 +702,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(139, 107);
+            this.label3.Location = new System.Drawing.Point(267, 107);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(119, 19);
             this.label3.TabIndex = 1;
@@ -651,7 +712,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(139, 57);
+            this.label2.Location = new System.Drawing.Point(267, 57);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 19);
             this.label2.TabIndex = 0;
@@ -669,17 +730,6 @@
             this.lblFrmActual.Text = "Dashboard";
             this.lblFrmActual.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBoxInicio
-            // 
-            this.pictureBoxInicio.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInicio.Image")));
-            this.pictureBoxInicio.Location = new System.Drawing.Point(44, 0);
-            this.pictureBoxInicio.Name = "pictureBoxInicio";
-            this.pictureBoxInicio.Size = new System.Drawing.Size(140, 140);
-            this.pictureBoxInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxInicio.TabIndex = 1;
-            this.pictureBoxInicio.TabStop = false;
-            this.pictureBoxInicio.Click += new System.EventHandler(this.pictureBoxInicio_Click);
-            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -694,24 +744,26 @@
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormPrincipal";
+            this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.panelSuperior.ResumeLayout(false);
             this.panelSuperior.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ipbLogin)).EndInit();
             this.panelMenu.ResumeLayout(false);
             this.panelOficinasSubMenu.ResumeLayout(false);
             this.panelEmpleadosSubMenu.ResumeLayout(false);
             this.panelEquiposSubMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInicio)).EndInit();
             this.panelContenedor.ResumeLayout(false);
             this.panelContenedor.PerformLayout();
-            this.groupBoxEstadisticas.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            this.groupBoxCódigosQR.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxContenidoQR)).EndInit();
             this.groupBoxEmpleados.ResumeLayout(false);
             this.groupBoxEmpleados.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxFormActual)).EndInit();
             this.groupBoxEquipos.ResumeLayout(false);
             this.groupBoxEquipos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInicio)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -751,8 +803,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBoxEmpleados;
         private System.Windows.Forms.Label labelTotalEmpleados;
-        private System.Windows.Forms.GroupBox groupBoxEstadisticas;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.GroupBox groupBoxCódigosQR;
         private System.Windows.Forms.PictureBox pictureBoxInicio;
+        private System.Windows.Forms.Label labelTotalInventario;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pictureBoxContenidoQR;
+        private FontAwesome.Sharp.IconButton btnGenerarQR;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -13,10 +14,16 @@ namespace Sistema_de_Asignacion_de_Activos_Fijos
 {
     public partial class FormPrincipal : Form
     {
+
+        ConexionDB conexionDB;
+        SqlConnection connection;
+
         public FormPrincipal()
         {
             InitializeComponent();
             personalizarDiseño();
+            conexionDB = new ConexionDB();
+            connection = conexionDB.getConexion();
         }
 
         //este codigo tendra la funcionalidad de arrastrar el formulario
@@ -92,10 +99,11 @@ namespace Sistema_de_Asignacion_de_Activos_Fijos
         {
             WindowState = FormWindowState.Minimized;
         }
+
         //declaramos esta variable para los formularios que se abren
         private Form formularioActivo = null;
 
-        private void abrirFormulariosEnPanelPrinicipal(Form formularioHijo)
+        public void abrirFormulariosEnPanelPrinicipal(Form formularioHijo)
         {
             if (formularioActivo != null)
             {
@@ -151,7 +159,7 @@ namespace Sistema_de_Asignacion_de_Activos_Fijos
 
         private void btnCargos_Click(object sender, EventArgs e)
         {
-
+            abrirFormulariosEnPanelPrinicipal(new FormCargosEmpleados());
         }
 
         private void btnMenuOficinas_Click(object sender, EventArgs e)
@@ -161,17 +169,18 @@ namespace Sistema_de_Asignacion_de_Activos_Fijos
 
         private void btnOficinas_Click(object sender, EventArgs e)
         {
-
+            abrirFormulariosEnPanelPrinicipal(new FormOficinas());
         }
 
         private void btnEncargados_Click(object sender, EventArgs e)
         {
-
+            abrirFormulariosEnPanelPrinicipal(new FormResponsableOficina());
         }
 
         private void btnPartidaMenu_Click(object sender, EventArgs e)
         {
             ocultarSubMenu();
+            abrirFormulariosEnPanelPrinicipal(new FormPartida());
         }
 
         private void pictureBoxInicio_Click(object sender, EventArgs e)
@@ -182,6 +191,49 @@ namespace Sistema_de_Asignacion_de_Activos_Fijos
                 formularioActivo.Close();
             }
             panelContenedor.BringToFront();
+        }
+
+        private void FormPrincipal_Load(object sender, EventArgs e)
+        {
+            cargarDatos();
+        }
+
+        private void cargarDatos()
+        {
+            connection.Open();
+
+            string queryEmp = "SELECT COUNT(*) FROM Empleados";
+
+            using (SqlCommand command = new SqlCommand(queryEmp, connection))
+            {
+                int cantidadEmpleados = (int)command.ExecuteScalar();
+
+                labelTotalEmpleados.Text = cantidadEmpleados.ToString();
+            }
+
+            string queryInv = "SELECT COUNT(*) FROM Inventario";
+
+            using (SqlCommand command = new SqlCommand(queryInv, connection))
+            {
+                int cantidadInventarios = (int)command.ExecuteScalar();
+
+                labelTotalInventario.Text = cantidadInventarios.ToString();
+            }
+
+            string queryAsig = "SELECT COUNT(*) FROM Asignacion";
+
+            using (SqlCommand command = new SqlCommand(queryAsig, connection))
+            {
+                int cantidadAsignados = (int)command.ExecuteScalar();
+
+                labelAsignados.Text = cantidadAsignados.ToString();
+            }
+        }
+
+        private void btnGenerarQR_Click(object sender, EventArgs e)
+        {
+            abrirFormulariosEnPanelPrinicipal(new FormEquiposAsignados());
+
         }
     }
 }

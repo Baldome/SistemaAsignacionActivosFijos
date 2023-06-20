@@ -60,12 +60,24 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Desplaza.cs" />
+    <Compile Include="ConexionDB.cs" />
+    <Compile Include="FormAgregarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAgregarEmpleado.Designer.cs">
+      <DependentUpon>FormAgregarEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAsignacion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormAsignacion.Designer.cs">
       <DependentUpon>FormAsignacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCargosEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCargosEmpleados.Designer.cs">
+      <DependentUpon>FormCargosEmpleados.cs</DependentUpon>
     </Compile>
     <Compile Include="FormDevolucion.cs">
       <SubType>Form</SubType>
@@ -85,11 +97,29 @@
     <Compile Include="FormEquiposAsignados.Designer.cs">
       <DependentUpon>FormEquiposAsignados.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormLIstadoInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLIstadoInventario.Designer.cs">
+      <DependentUpon>FormLIstadoInventario.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOficinas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOficinas.Designer.cs">
+      <DependentUpon>FormOficinas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPartida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPartida.Designer.cs">
+      <DependentUpon>FormPartida.cs</DependentUpon>
     </Compile>
     <Compile Include="FormPrincipal.cs">
       <SubType>Form</SubType>
@@ -97,10 +127,22 @@
     <Compile Include="FormPrincipal.Designer.cs">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormResponsableOficina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormResponsableOficina.Designer.cs">
+      <DependentUpon>FormResponsableOficina.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAgregarEmpleado.resx">
+      <DependentUpon>FormAgregarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAsignacion.resx">
       <DependentUpon>FormAsignacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCargosEmpleados.resx">
+      <DependentUpon>FormCargosEmpleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDevolucion.resx">
       <DependentUpon>FormDevolucion.cs</DependentUpon>
@@ -111,11 +153,23 @@
     <EmbeddedResource Include="FormEquiposAsignados.resx">
       <DependentUpon>FormEquiposAsignados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormLIstadoInventario.resx">
+      <DependentUpon>FormLIstadoInventario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormOficinas.resx">
+      <DependentUpon>FormOficinas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPartida.resx">
+      <DependentUpon>FormPartida.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormResponsableOficina.resx">
+      <DependentUpon>FormResponsableOficina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
