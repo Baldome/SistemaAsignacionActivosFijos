@@ -793,7 +793,6 @@
         private FontAwesome.Sharp.IconButton btnAsignarEquipos;
         private FontAwesome.Sharp.IconButton btnMenuEquipos;
         private System.Windows.Forms.Panel panelLogo;
-        private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.GroupBox groupBoxEquipos;
         private System.Windows.Forms.Label lblFrmActual;
         private FontAwesome.Sharp.IconPictureBox iconPictureBoxFormActual;
@@ -810,5 +809,6 @@
         private System.Windows.Forms.PictureBox pictureBoxContenidoQR;
         private FontAwesome.Sharp.IconButton btnGenerarQR;
         private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Panel panelContenedor;
     }
 }

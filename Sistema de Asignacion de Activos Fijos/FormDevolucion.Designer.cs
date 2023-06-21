@@ -35,7 +35,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBoxEpleados = new System.Windows.Forms.GroupBox();
-            this.btnBuscarEmpleado = new FontAwesome.Sharp.IconButton();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -50,7 +49,7 @@
             this.txtAreaTrabajo = new System.Windows.Forms.TextBox();
             this.txtProfesion = new System.Windows.Forms.TextBox();
             this.groupBoxEquipo = new System.Windows.Forms.GroupBox();
-            this.btnBuscarEquipo = new FontAwesome.Sharp.IconButton();
+            this.btnBuscarAsignacion = new FontAwesome.Sharp.IconButton();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -154,7 +153,6 @@
             this.groupBoxEpleados.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBoxEpleados.Controls.Add(this.btnBuscarEmpleado);
             this.groupBoxEpleados.Controls.Add(this.tableLayoutPanel3);
             this.groupBoxEpleados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(34)))), ((int)(((byte)(57)))));
             this.groupBoxEpleados.Location = new System.Drawing.Point(4, 207);
@@ -165,26 +163,6 @@
             this.groupBoxEpleados.TabIndex = 2;
             this.groupBoxEpleados.TabStop = false;
             this.groupBoxEpleados.Text = "Empleados";
-            // 
-            // btnBuscarEmpleado
-            // 
-            this.btnBuscarEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(34)))), ((int)(((byte)(57)))));
-            this.btnBuscarEmpleado.FlatAppearance.BorderSize = 0;
-            this.btnBuscarEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarEmpleado.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarEmpleado.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarEmpleado.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.btnBuscarEmpleado.IconColor = System.Drawing.Color.White;
-            this.btnBuscarEmpleado.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBuscarEmpleado.IconSize = 25;
-            this.btnBuscarEmpleado.Location = new System.Drawing.Point(89, 0);
-            this.btnBuscarEmpleado.Margin = new System.Windows.Forms.Padding(0);
-            this.btnBuscarEmpleado.Name = "btnBuscarEmpleado";
-            this.btnBuscarEmpleado.Size = new System.Drawing.Size(35, 35);
-            this.btnBuscarEmpleado.TabIndex = 7;
-            this.btnBuscarEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarEmpleado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBuscarEmpleado.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel3
             // 
@@ -348,7 +326,7 @@
             this.groupBoxEquipo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBoxEquipo.Controls.Add(this.btnBuscarEquipo);
+            this.groupBoxEquipo.Controls.Add(this.btnBuscarAsignacion);
             this.groupBoxEquipo.Controls.Add(this.tableLayoutPanel2);
             this.groupBoxEquipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(34)))), ((int)(((byte)(57)))));
             this.groupBoxEquipo.Location = new System.Drawing.Point(4, 3);
@@ -360,25 +338,26 @@
             this.groupBoxEquipo.TabStop = false;
             this.groupBoxEquipo.Text = "Inventario";
             // 
-            // btnBuscarEquipo
+            // btnBuscarAsignacion
             // 
-            this.btnBuscarEquipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(34)))), ((int)(((byte)(57)))));
-            this.btnBuscarEquipo.FlatAppearance.BorderSize = 0;
-            this.btnBuscarEquipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarEquipo.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarEquipo.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarEquipo.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.btnBuscarEquipo.IconColor = System.Drawing.Color.White;
-            this.btnBuscarEquipo.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBuscarEquipo.IconSize = 25;
-            this.btnBuscarEquipo.Location = new System.Drawing.Point(88, 0);
-            this.btnBuscarEquipo.Margin = new System.Windows.Forms.Padding(0);
-            this.btnBuscarEquipo.Name = "btnBuscarEquipo";
-            this.btnBuscarEquipo.Size = new System.Drawing.Size(35, 35);
-            this.btnBuscarEquipo.TabIndex = 6;
-            this.btnBuscarEquipo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarEquipo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBuscarEquipo.UseVisualStyleBackColor = false;
+            this.btnBuscarAsignacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(34)))), ((int)(((byte)(57)))));
+            this.btnBuscarAsignacion.FlatAppearance.BorderSize = 0;
+            this.btnBuscarAsignacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarAsignacion.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarAsignacion.ForeColor = System.Drawing.Color.White;
+            this.btnBuscarAsignacion.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btnBuscarAsignacion.IconColor = System.Drawing.Color.White;
+            this.btnBuscarAsignacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBuscarAsignacion.IconSize = 25;
+            this.btnBuscarAsignacion.Location = new System.Drawing.Point(107, 0);
+            this.btnBuscarAsignacion.Margin = new System.Windows.Forms.Padding(0);
+            this.btnBuscarAsignacion.Name = "btnBuscarAsignacion";
+            this.btnBuscarAsignacion.Size = new System.Drawing.Size(35, 35);
+            this.btnBuscarAsignacion.TabIndex = 6;
+            this.btnBuscarAsignacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarAsignacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBuscarAsignacion.UseVisualStyleBackColor = false;
+            this.btnBuscarAsignacion.Click += new System.EventHandler(this.btnBuscarAsignacion_Click);
             // 
             // tableLayoutPanel2
             // 
@@ -611,7 +590,6 @@
         private System.Windows.Forms.Panel panel3;
         private FontAwesome.Sharp.IconButton btnGuardar;
         private System.Windows.Forms.GroupBox groupBoxEpleados;
-        private FontAwesome.Sharp.IconButton btnBuscarEmpleado;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
@@ -626,7 +604,7 @@
         private System.Windows.Forms.TextBox txtAreaTrabajo;
         private System.Windows.Forms.TextBox txtProfesion;
         private System.Windows.Forms.GroupBox groupBoxEquipo;
-        private FontAwesome.Sharp.IconButton btnBuscarEquipo;
+        private FontAwesome.Sharp.IconButton btnBuscarAsignacion;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;

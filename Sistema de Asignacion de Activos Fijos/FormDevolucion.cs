@@ -12,9 +12,22 @@ namespace Sistema_de_Asignacion_de_Activos_Fijos
 {
     public partial class FormDevolucion : Form
     {
+        ConexionDB conexionDB;
+        FormEquiposAsignados formEquiposAsignados;
         public FormDevolucion()
         {
             InitializeComponent();
+            conexionDB = new ConexionDB();
+            formEquiposAsignados = new FormEquiposAsignados();
+        }
+
+        private void btnBuscarAsignacion_Click(object sender, EventArgs e)
+        {
+            formEquiposAsignados.btnMaximizar.Visible = true;
+            formEquiposAsignados.btnSeleccionar.Visible = true;
+            formEquiposAsignados.btnGenerarQR.Visible = false;
+            
+            formEquiposAsignados.ShowDialog();
         }
     }
 }

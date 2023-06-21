@@ -34,7 +34,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBoxEpleados = new System.Windows.Forms.GroupBox();
-            this.btnBuscarEmpleado = new FontAwesome.Sharp.IconButton();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -49,6 +48,8 @@
             this.txtAreaTrabajo = new System.Windows.Forms.TextBox();
             this.txtProfesion = new System.Windows.Forms.TextBox();
             this.groupBoxInventario = new System.Windows.Forms.GroupBox();
+            this.lblNumeroInventario = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.btnBuscarEquipo = new FontAwesome.Sharp.IconButton();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
@@ -64,10 +65,14 @@
             this.txtResponsable = new System.Windows.Forms.TextBox();
             this.txtCargoResp = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnActualizar = new FontAwesome.Sharp.IconButton();
             this.btnGuardar = new FontAwesome.Sharp.IconButton();
             this.txtRubro = new CustomBox.RJControls.RJTextBox();
+            this.btnMaximizar = new FontAwesome.Sharp.IconButton();
+            this.btnCancelar = new FontAwesome.Sharp.IconButton();
+            this.lblNumeroEmpleado = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxFormActual)).BeginInit();
+            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBoxEpleados.SuspendLayout();
@@ -110,6 +115,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnMaximizar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -152,7 +158,8 @@
             this.groupBoxEpleados.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBoxEpleados.Controls.Add(this.btnBuscarEmpleado);
+            this.groupBoxEpleados.Controls.Add(this.lblNumeroEmpleado);
+            this.groupBoxEpleados.Controls.Add(this.label15);
             this.groupBoxEpleados.Controls.Add(this.tableLayoutPanel3);
             this.groupBoxEpleados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(34)))), ((int)(((byte)(57)))));
             this.groupBoxEpleados.Location = new System.Drawing.Point(2, 207);
@@ -163,26 +170,6 @@
             this.groupBoxEpleados.TabIndex = 2;
             this.groupBoxEpleados.TabStop = false;
             this.groupBoxEpleados.Text = "Empleados";
-            // 
-            // btnBuscarEmpleado
-            // 
-            this.btnBuscarEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(34)))), ((int)(((byte)(57)))));
-            this.btnBuscarEmpleado.FlatAppearance.BorderSize = 0;
-            this.btnBuscarEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarEmpleado.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarEmpleado.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarEmpleado.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.btnBuscarEmpleado.IconColor = System.Drawing.Color.White;
-            this.btnBuscarEmpleado.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBuscarEmpleado.IconSize = 25;
-            this.btnBuscarEmpleado.Location = new System.Drawing.Point(85, 1);
-            this.btnBuscarEmpleado.Margin = new System.Windows.Forms.Padding(0);
-            this.btnBuscarEmpleado.Name = "btnBuscarEmpleado";
-            this.btnBuscarEmpleado.Size = new System.Drawing.Size(35, 35);
-            this.btnBuscarEmpleado.TabIndex = 7;
-            this.btnBuscarEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarEmpleado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBuscarEmpleado.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel3
             // 
@@ -244,6 +231,7 @@
             this.txtUnidad.Location = new System.Drawing.Point(88, 118);
             this.txtUnidad.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtUnidad.Name = "txtUnidad";
+            this.txtUnidad.ReadOnly = true;
             this.txtUnidad.Size = new System.Drawing.Size(158, 25);
             this.txtUnidad.TabIndex = 7;
             // 
@@ -265,6 +253,7 @@
             this.txtOficinaEmp.Location = new System.Drawing.Point(582, 31);
             this.txtOficinaEmp.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtOficinaEmp.Name = "txtOficinaEmp";
+            this.txtOficinaEmp.ReadOnly = true;
             this.txtOficinaEmp.Size = new System.Drawing.Size(160, 25);
             this.txtOficinaEmp.TabIndex = 5;
             // 
@@ -275,6 +264,7 @@
             this.txtCargoEmp.Location = new System.Drawing.Point(336, 31);
             this.txtCargoEmp.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtCargoEmp.Name = "txtCargoEmp";
+            this.txtCargoEmp.ReadOnly = true;
             this.txtCargoEmp.Size = new System.Drawing.Size(156, 25);
             this.txtCargoEmp.TabIndex = 4;
             // 
@@ -296,6 +286,7 @@
             this.txtNombre.Location = new System.Drawing.Point(88, 31);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtNombre.Name = "txtNombre";
+            this.txtNombre.ReadOnly = true;
             this.txtNombre.Size = new System.Drawing.Size(158, 25);
             this.txtNombre.TabIndex = 0;
             // 
@@ -328,6 +319,7 @@
             this.txtAreaTrabajo.Location = new System.Drawing.Point(336, 118);
             this.txtAreaTrabajo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtAreaTrabajo.Name = "txtAreaTrabajo";
+            this.txtAreaTrabajo.ReadOnly = true;
             this.txtAreaTrabajo.Size = new System.Drawing.Size(156, 25);
             this.txtAreaTrabajo.TabIndex = 8;
             // 
@@ -338,6 +330,7 @@
             this.txtProfesion.Location = new System.Drawing.Point(582, 118);
             this.txtProfesion.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtProfesion.Name = "txtProfesion";
+            this.txtProfesion.ReadOnly = true;
             this.txtProfesion.Size = new System.Drawing.Size(160, 25);
             this.txtProfesion.TabIndex = 9;
             // 
@@ -346,6 +339,8 @@
             this.groupBoxInventario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxInventario.Controls.Add(this.lblNumeroInventario);
+            this.groupBoxInventario.Controls.Add(this.label13);
             this.groupBoxInventario.Controls.Add(this.btnBuscarEquipo);
             this.groupBoxInventario.Controls.Add(this.tableLayoutPanel2);
             this.groupBoxInventario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(34)))), ((int)(((byte)(57)))));
@@ -357,6 +352,31 @@
             this.groupBoxInventario.TabIndex = 1;
             this.groupBoxInventario.TabStop = false;
             this.groupBoxInventario.Text = "Inventario";
+            // 
+            // lblNumeroInventario
+            // 
+            this.lblNumeroInventario.AutoSize = true;
+            this.lblNumeroInventario.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumeroInventario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblNumeroInventario.Location = new System.Drawing.Point(346, -1);
+            this.lblNumeroInventario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNumeroInventario.Name = "lblNumeroInventario";
+            this.lblNumeroInventario.Size = new System.Drawing.Size(18, 19);
+            this.lblNumeroInventario.TabIndex = 8;
+            this.lblNumeroInventario.Text = "0";
+            this.lblNumeroInventario.Visible = false;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label13.Location = new System.Drawing.Point(123, 0);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(219, 16);
+            this.label13.TabIndex = 7;
+            this.label13.Text = "Número de Inventario Seleccionado:";
+            this.label13.Visible = false;
             // 
             // btnBuscarEquipo
             // 
@@ -439,6 +459,7 @@
             this.txtEstado.Location = new System.Drawing.Point(88, 118);
             this.txtEstado.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtEstado.Name = "txtEstado";
+            this.txtEstado.ReadOnly = true;
             this.txtEstado.Size = new System.Drawing.Size(159, 25);
             this.txtEstado.TabIndex = 7;
             // 
@@ -460,6 +481,7 @@
             this.txtOficina.Location = new System.Drawing.Point(584, 31);
             this.txtOficina.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtOficina.Name = "txtOficina";
+            this.txtOficina.ReadOnly = true;
             this.txtOficina.Size = new System.Drawing.Size(158, 25);
             this.txtOficina.TabIndex = 5;
             // 
@@ -470,6 +492,7 @@
             this.txtAuxiliar.Location = new System.Drawing.Point(337, 31);
             this.txtAuxiliar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtAuxiliar.Name = "txtAuxiliar";
+            this.txtAuxiliar.ReadOnly = true;
             this.txtAuxiliar.Size = new System.Drawing.Size(157, 25);
             this.txtAuxiliar.TabIndex = 4;
             // 
@@ -491,6 +514,7 @@
             this.txtRubros.Location = new System.Drawing.Point(88, 31);
             this.txtRubros.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtRubros.Name = "txtRubros";
+            this.txtRubros.ReadOnly = true;
             this.txtRubros.Size = new System.Drawing.Size(159, 25);
             this.txtRubros.TabIndex = 0;
             // 
@@ -523,6 +547,7 @@
             this.txtResponsable.Location = new System.Drawing.Point(337, 118);
             this.txtResponsable.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtResponsable.Name = "txtResponsable";
+            this.txtResponsable.ReadOnly = true;
             this.txtResponsable.Size = new System.Drawing.Size(157, 25);
             this.txtResponsable.TabIndex = 8;
             // 
@@ -533,12 +558,13 @@
             this.txtCargoResp.Location = new System.Drawing.Point(584, 118);
             this.txtCargoResp.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtCargoResp.Name = "txtCargoResp";
+            this.txtCargoResp.ReadOnly = true;
             this.txtCargoResp.Size = new System.Drawing.Size(158, 25);
             this.txtCargoResp.TabIndex = 9;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.btnActualizar);
+            this.panel3.Controls.Add(this.btnCancelar);
             this.panel3.Controls.Add(this.btnGuardar);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(4, 412);
@@ -546,30 +572,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(752, 80);
             this.panel3.TabIndex = 6;
-            // 
-            // btnActualizar
-            // 
-            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(34)))), ((int)(((byte)(57)))));
-            this.btnActualizar.FlatAppearance.BorderSize = 0;
-            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizar.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.ForeColor = System.Drawing.Color.White;
-            this.btnActualizar.IconChar = FontAwesome.Sharp.IconChar.FileEdit;
-            this.btnActualizar.IconColor = System.Drawing.Color.White;
-            this.btnActualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnActualizar.IconSize = 30;
-            this.btnActualizar.Location = new System.Drawing.Point(155, 15);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Padding = new System.Windows.Forms.Padding(4);
-            this.btnActualizar.Size = new System.Drawing.Size(140, 50);
-            this.btnActualizar.TabIndex = 6;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnActualizar.UseVisualStyleBackColor = false;
             // 
             // btnGuardar
             // 
@@ -590,10 +592,11 @@
             this.btnGuardar.Padding = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Size = new System.Drawing.Size(140, 50);
             this.btnGuardar.TabIndex = 5;
-            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.Text = "   Asignar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // txtRubro
             // 
@@ -618,6 +621,74 @@
             this.txtRubro.Texts = "";
             this.txtRubro.UnderlinedStyle = false;
             // 
+            // btnMaximizar
+            // 
+            this.btnMaximizar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnMaximizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaximizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(34)))), ((int)(((byte)(57)))));
+            this.btnMaximizar.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
+            this.btnMaximizar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(34)))), ((int)(((byte)(57)))));
+            this.btnMaximizar.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnMaximizar.IconSize = 40;
+            this.btnMaximizar.Location = new System.Drawing.Point(706, 14);
+            this.btnMaximizar.Name = "btnMaximizar";
+            this.btnMaximizar.Size = new System.Drawing.Size(40, 40);
+            this.btnMaximizar.TabIndex = 18;
+            this.btnMaximizar.UseVisualStyleBackColor = true;
+            this.btnMaximizar.Visible = false;
+            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(34)))), ((int)(((byte)(57)))));
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.Xmark;
+            this.btnCancelar.IconColor = System.Drawing.Color.White;
+            this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCancelar.IconSize = 30;
+            this.btnCancelar.Location = new System.Drawing.Point(153, 15);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Padding = new System.Windows.Forms.Padding(4);
+            this.btnCancelar.Size = new System.Drawing.Size(140, 50);
+            this.btnCancelar.TabIndex = 7;
+            this.btnCancelar.Text = "   Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // lblNumeroEmpleado
+            // 
+            this.lblNumeroEmpleado.AutoSize = true;
+            this.lblNumeroEmpleado.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumeroEmpleado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblNumeroEmpleado.Location = new System.Drawing.Point(349, 1);
+            this.lblNumeroEmpleado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNumeroEmpleado.Name = "lblNumeroEmpleado";
+            this.lblNumeroEmpleado.Size = new System.Drawing.Size(18, 19);
+            this.lblNumeroEmpleado.TabIndex = 10;
+            this.lblNumeroEmpleado.Text = "0";
+            this.lblNumeroEmpleado.Visible = false;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label15.Location = new System.Drawing.Point(123, 2);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(224, 16);
+            this.label15.TabIndex = 9;
+            this.label15.Text = "Número del Empleado Seleccionado:";
+            this.label15.Visible = false;
+            // 
             // FormAsignacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -630,14 +701,18 @@
             this.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormAsignacion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAsignacion";
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxFormActual)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBoxEpleados.ResumeLayout(false);
+            this.groupBoxEpleados.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.groupBoxInventario.ResumeLayout(false);
+            this.groupBoxInventario.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -657,35 +732,39 @@
         private System.Windows.Forms.GroupBox groupBoxEpleados;
         private System.Windows.Forms.GroupBox groupBoxInventario;
         private System.Windows.Forms.Panel panel3;
-        private FontAwesome.Sharp.IconButton btnActualizar;
         private CustomBox.RJControls.RJTextBox txtRubro;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.TextBox txtRubros;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtOficina;
-        private System.Windows.Forms.TextBox txtAuxiliar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtResponsable;
-        private System.Windows.Forms.TextBox txtCargoResp;
         private FontAwesome.Sharp.IconButton btnBuscarEquipo;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtUnidad;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtOficinaEmp;
-        private System.Windows.Forms.TextBox txtCargoEmp;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtAreaTrabajo;
-        private System.Windows.Forms.TextBox txtProfesion;
-        private FontAwesome.Sharp.IconButton btnBuscarEmpleado;
+        public System.Windows.Forms.TextBox txtRubros;
+        public System.Windows.Forms.TextBox txtOficina;
+        public System.Windows.Forms.TextBox txtAuxiliar;
+        public System.Windows.Forms.TextBox txtEstado;
+        public System.Windows.Forms.TextBox txtResponsable;
+        public System.Windows.Forms.TextBox txtCargoResp;
+        public System.Windows.Forms.TextBox txtUnidad;
+        public System.Windows.Forms.TextBox txtOficinaEmp;
+        public System.Windows.Forms.TextBox txtCargoEmp;
+        public System.Windows.Forms.TextBox txtNombre;
+        public System.Windows.Forms.TextBox txtAreaTrabajo;
+        public System.Windows.Forms.TextBox txtProfesion;
+        public System.Windows.Forms.Label lblNumeroInventario;
+        public System.Windows.Forms.Label label13;
+        public FontAwesome.Sharp.IconButton btnMaximizar;
+        public FontAwesome.Sharp.IconButton btnCancelar;
+        public System.Windows.Forms.Label lblNumeroEmpleado;
+        public System.Windows.Forms.Label label15;
     }
 }

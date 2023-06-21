@@ -29,22 +29,24 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnMinimizar = new FontAwesome.Sharp.IconButton();
+            this.btnMaximizar = new FontAwesome.Sharp.IconButton();
+            this.btnCerrar = new FontAwesome.Sharp.IconButton();
             this.iconPictureBoxFormActual = new FontAwesome.Sharp.IconPictureBox();
             this.lblFrmActual = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridViewInventario = new System.Windows.Forms.DataGridView();
-            this.btnSeleccionar = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnMinimizar = new FontAwesome.Sharp.IconButton();
-            this.btnMaximizar = new FontAwesome.Sharp.IconButton();
-            this.btnCerrar = new FontAwesome.Sharp.IconButton();
+            this.btnSeleccionar = new FontAwesome.Sharp.IconButton();
+            this.dataGridViewListadoEmpleados = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxFormActual)).BeginInit();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInventario)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListadoEmpleados)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -62,110 +64,6 @@
             this.panel1.Size = new System.Drawing.Size(930, 50);
             this.panel1.TabIndex = 19;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
-            // 
-            // iconPictureBoxFormActual
-            // 
-            this.iconPictureBoxFormActual.BackColor = System.Drawing.Color.Transparent;
-            this.iconPictureBoxFormActual.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.iconPictureBoxFormActual.IconChar = FontAwesome.Sharp.IconChar.ClipboardList;
-            this.iconPictureBoxFormActual.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.iconPictureBoxFormActual.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBoxFormActual.IconSize = 35;
-            this.iconPictureBoxFormActual.Location = new System.Drawing.Point(15, 8);
-            this.iconPictureBoxFormActual.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.iconPictureBoxFormActual.Name = "iconPictureBoxFormActual";
-            this.iconPictureBoxFormActual.Size = new System.Drawing.Size(35, 35);
-            this.iconPictureBoxFormActual.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.iconPictureBoxFormActual.TabIndex = 15;
-            this.iconPictureBoxFormActual.TabStop = false;
-            // 
-            // lblFrmActual
-            // 
-            this.lblFrmActual.AutoSize = true;
-            this.lblFrmActual.BackColor = System.Drawing.Color.Transparent;
-            this.lblFrmActual.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFrmActual.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.lblFrmActual.Location = new System.Drawing.Point(54, 15);
-            this.lblFrmActual.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblFrmActual.Name = "lblFrmActual";
-            this.lblFrmActual.Size = new System.Drawing.Size(198, 21);
-            this.lblFrmActual.TabIndex = 14;
-            this.lblFrmActual.Text = "Listado de Inventario";
-            this.lblFrmActual.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.tableLayoutPanel1);
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 50);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(4);
-            this.panel2.Size = new System.Drawing.Size(930, 500);
-            this.panel2.TabIndex = 20;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.dataGridViewInventario, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(34)))), ((int)(((byte)(57)))));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(4, 4);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(5);
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(922, 412);
-            this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // dataGridViewInventario
-            // 
-            this.dataGridViewInventario.BackgroundColor = System.Drawing.Color.LightBlue;
-            this.dataGridViewInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewInventario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewInventario.Location = new System.Drawing.Point(8, 8);
-            this.dataGridViewInventario.Name = "dataGridViewInventario";
-            this.dataGridViewInventario.Size = new System.Drawing.Size(906, 396);
-            this.dataGridViewInventario.TabIndex = 0;
-            // 
-            // btnSeleccionar
-            // 
-            this.btnSeleccionar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnSeleccionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(34)))), ((int)(((byte)(57)))));
-            this.btnSeleccionar.FlatAppearance.BorderSize = 0;
-            this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSeleccionar.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.ForeColor = System.Drawing.Color.White;
-            this.btnSeleccionar.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
-            this.btnSeleccionar.IconColor = System.Drawing.Color.White;
-            this.btnSeleccionar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSeleccionar.IconSize = 30;
-            this.btnSeleccionar.Location = new System.Drawing.Point(13, 15);
-            this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Padding = new System.Windows.Forms.Padding(6);
-            this.btnSeleccionar.Size = new System.Drawing.Size(150, 50);
-            this.btnSeleccionar.TabIndex = 5;
-            this.btnSeleccionar.Text = "   Seleccionar";
-            this.btnSeleccionar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSeleccionar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSeleccionar.UseVisualStyleBackColor = false;
-            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.btnSeleccionar);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(4, 416);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(922, 80);
-            this.panel3.TabIndex = 6;
             // 
             // btnMinimizar
             // 
@@ -218,6 +116,122 @@
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
+            // iconPictureBoxFormActual
+            // 
+            this.iconPictureBoxFormActual.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBoxFormActual.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.iconPictureBoxFormActual.IconChar = FontAwesome.Sharp.IconChar.ClipboardList;
+            this.iconPictureBoxFormActual.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.iconPictureBoxFormActual.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBoxFormActual.IconSize = 35;
+            this.iconPictureBoxFormActual.Location = new System.Drawing.Point(15, 8);
+            this.iconPictureBoxFormActual.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.iconPictureBoxFormActual.Name = "iconPictureBoxFormActual";
+            this.iconPictureBoxFormActual.Size = new System.Drawing.Size(35, 35);
+            this.iconPictureBoxFormActual.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.iconPictureBoxFormActual.TabIndex = 15;
+            this.iconPictureBoxFormActual.TabStop = false;
+            // 
+            // lblFrmActual
+            // 
+            this.lblFrmActual.AutoSize = true;
+            this.lblFrmActual.BackColor = System.Drawing.Color.Transparent;
+            this.lblFrmActual.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFrmActual.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.lblFrmActual.Location = new System.Drawing.Point(54, 15);
+            this.lblFrmActual.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFrmActual.Name = "lblFrmActual";
+            this.lblFrmActual.Size = new System.Drawing.Size(198, 21);
+            this.lblFrmActual.TabIndex = 14;
+            this.lblFrmActual.Text = "Listado de Inventario";
+            this.lblFrmActual.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.tableLayoutPanel1);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 50);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(4);
+            this.panel2.Size = new System.Drawing.Size(930, 500);
+            this.panel2.TabIndex = 20;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.dataGridViewListadoEmpleados, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.dataGridViewInventario, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(34)))), ((int)(((byte)(57)))));
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(5);
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(922, 412);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // dataGridViewInventario
+            // 
+            this.dataGridViewInventario.BackgroundColor = System.Drawing.Color.LightBlue;
+            this.dataGridViewInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewInventario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewInventario.Location = new System.Drawing.Point(8, 8);
+            this.dataGridViewInventario.Name = "dataGridViewInventario";
+            this.dataGridViewInventario.Size = new System.Drawing.Size(906, 195);
+            this.dataGridViewInventario.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnSeleccionar);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(4, 416);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(922, 80);
+            this.panel3.TabIndex = 6;
+            // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnSeleccionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(34)))), ((int)(((byte)(57)))));
+            this.btnSeleccionar.FlatAppearance.BorderSize = 0;
+            this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeleccionar.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeleccionar.ForeColor = System.Drawing.Color.White;
+            this.btnSeleccionar.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
+            this.btnSeleccionar.IconColor = System.Drawing.Color.White;
+            this.btnSeleccionar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSeleccionar.IconSize = 30;
+            this.btnSeleccionar.Location = new System.Drawing.Point(13, 15);
+            this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Padding = new System.Windows.Forms.Padding(6);
+            this.btnSeleccionar.Size = new System.Drawing.Size(150, 50);
+            this.btnSeleccionar.TabIndex = 5;
+            this.btnSeleccionar.Text = "   Seleccionar";
+            this.btnSeleccionar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSeleccionar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSeleccionar.UseVisualStyleBackColor = false;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
+            // 
+            // dataGridViewListadoEmpleados
+            // 
+            this.dataGridViewListadoEmpleados.BackgroundColor = System.Drawing.Color.LightBlue;
+            this.dataGridViewListadoEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewListadoEmpleados.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewListadoEmpleados.Location = new System.Drawing.Point(8, 209);
+            this.dataGridViewListadoEmpleados.Name = "dataGridViewListadoEmpleados";
+            this.dataGridViewListadoEmpleados.Size = new System.Drawing.Size(906, 195);
+            this.dataGridViewListadoEmpleados.TabIndex = 1;
+            // 
             // FormLIstadoInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -227,7 +241,7 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormLIstadoInventario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLIstadoInventario";
@@ -239,6 +253,7 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInventario)).EndInit();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListadoEmpleados)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -256,5 +271,6 @@
         private FontAwesome.Sharp.IconButton btnMinimizar;
         private FontAwesome.Sharp.IconButton btnMaximizar;
         private FontAwesome.Sharp.IconButton btnCerrar;
+        private System.Windows.Forms.DataGridView dataGridViewListadoEmpleados;
     }
 }

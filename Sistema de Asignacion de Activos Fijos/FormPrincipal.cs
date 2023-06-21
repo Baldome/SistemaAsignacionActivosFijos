@@ -15,8 +15,10 @@ namespace Sistema_de_Asignacion_de_Activos_Fijos
     public partial class FormPrincipal : Form
     {
 
-        ConexionDB conexionDB;
-        SqlConnection connection;
+        private ConexionDB conexionDB;
+        private SqlConnection connection;
+        private FormEmpleados formEmpleados;
+        private FormEquiposAsignados formEquiposAsignados;
 
         public FormPrincipal()
         {
@@ -24,6 +26,8 @@ namespace Sistema_de_Asignacion_de_Activos_Fijos
             personalizarDiseño();
             conexionDB = new ConexionDB();
             connection = conexionDB.getConexion();
+            formEmpleados = new FormEmpleados();
+            formEquiposAsignados = new FormEquiposAsignados();
         }
 
         //este codigo tendra la funcionalidad de arrastrar el formulario
@@ -145,11 +149,13 @@ namespace Sistema_de_Asignacion_de_Activos_Fijos
         private void btnEquipos_Click(object sender, EventArgs e)
         {
             abrirFormulariosEnPanelPrinicipal(new FormEquiposAsignados());
+            formEquiposAsignados.cargarDatos();
         }
 
         private void btnMenuEmpleados_Click(object sender, EventArgs e)
         {
             mostrarSubMenu(panelEmpleadosSubMenu);
+            formEmpleados.cargarDatos();
         }
 
         private void btnEmpleados_Click(object sender, EventArgs e)
@@ -191,6 +197,7 @@ namespace Sistema_de_Asignacion_de_Activos_Fijos
                 formularioActivo.Close();
             }
             panelContenedor.BringToFront();
+            cargarDatos();
         }
 
         private void FormPrincipal_Load(object sender, EventArgs e)
@@ -228,12 +235,12 @@ namespace Sistema_de_Asignacion_de_Activos_Fijos
 
                 labelAsignados.Text = cantidadAsignados.ToString();
             }
+            connection.Close();
         }
 
         private void btnGenerarQR_Click(object sender, EventArgs e)
         {
             abrirFormulariosEnPanelPrinicipal(new FormEquiposAsignados());
-
         }
     }
 }
