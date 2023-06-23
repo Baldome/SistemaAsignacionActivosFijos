@@ -63,10 +63,8 @@ namespace Sistema_de_Asignacion_de_Activos_Fijos
                     {
                         // Convertir el resultado al tipo de dato correspondiente
                         string valorCampo = resultado.ToString();
-
                         char ultimoDigito = valorCampo[valorCampo.Length - 1];
                         int ultimoDigitoEntero = int.Parse(ultimoDigito.ToString());
-
                         if (ultimoDigitoEntero > 9)
                         {
                             prefijo = "ASIG-";
@@ -75,12 +73,33 @@ namespace Sistema_de_Asignacion_de_Activos_Fijos
                         {
                             prefijo = "ASIG-0";
                         }
-
                         ultimoDigitoEntero++;
                         string asig_no = prefijo + ultimoDigitoEntero.ToString();
                         string inv_no = lblNumeroInventario.Text;
                         string emp_no = lblNumeroEmpleado.Text;
-                        if(asig_no == "" || lblNumeroInventario.Text == "" || lblNumeroEmpleado.Text == "")
+                        if(asig_no != "" || lblNumeroInventario.Text != "" || lblNumeroEmpleado.Text != "")
+                        {
+                            string query = "INSERT INTO Asignacion VALUES (@AsigNo, @InvNo, @EmpNo)";
+                            SqlCommand comando = new SqlCommand(query, connection);
+                            comando.Parameters.AddWithValue("@AsigNo", asig_no);
+                            comando.Parameters.AddWithValue("@InvNo", inv_no);
+                            comando.Parameters.AddWithValue("@EmpNo", emp_no);
+                            comando.ExecuteNonQuery();
+                            MessageBox.Show("La asignación se realizó con exito");
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Los campos no pueden ser vacios seleccione inventario y empleado.");
+                        }
+                        
+                    }
+                    else
+                    {
+                        string asig_no = "ASIG-01";
+                        string inv_no = lblNumeroInventario.Text;
+                        string emp_no = lblNumeroEmpleado.Text;
+                        if (!(asig_no == "") || !(lblNumeroInventario.Text == "") || !(lblNumeroEmpleado.Text == ""))
                         {
                             string query = "INSERT INTO Asignacion VALUES (@AsigNo, @InvNo, @EmpNo)";
                             SqlCommand comando = new SqlCommand(query, connection);
@@ -97,12 +116,6 @@ namespace Sistema_de_Asignacion_de_Activos_Fijos
                         {
                             MessageBox.Show("Los campos no pueden ser vacios seleccione inventario y empleado.");
                         }
-                        
-                    }
-                    else
-                    {
-                        // No se encontró ningún resultado
-                        MessageBox.Show("No se encontró ningún resultado");
                     }
                 }
             }

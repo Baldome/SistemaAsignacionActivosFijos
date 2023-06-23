@@ -14,7 +14,6 @@ namespace Sistema_de_Asignacion_de_Activos_Fijos
 {
     public partial class FormPrincipal : Form
     {
-
         private ConexionDB conexionDB;
         private SqlConnection connection;
         private FormEmpleados formEmpleados;
@@ -161,6 +160,7 @@ namespace Sistema_de_Asignacion_de_Activos_Fijos
         private void btnEmpleados_Click(object sender, EventArgs e)
         {
             abrirFormulariosEnPanelPrinicipal(new FormEmpleados());
+            formEmpleados.cargarDatos();
         }
 
         private void btnCargos_Click(object sender, EventArgs e)

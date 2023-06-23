@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.iconPictureBoxFormActual = new FontAwesome.Sharp.IconPictureBox();
-            this.lblFrmActual = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPartida));
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridViewPartida = new System.Windows.Forms.DataGridView();
@@ -38,55 +36,16 @@
             this.btnEliminarPart = new FontAwesome.Sharp.IconButton();
             this.btnEditarPart = new FontAwesome.Sharp.IconButton();
             this.btnNuevoPart = new FontAwesome.Sharp.IconButton();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxFormActual)).BeginInit();
+            this.lblFrmActual = new System.Windows.Forms.Label();
+            this.iconPictureBoxFormActual = new FontAwesome.Sharp.IconPictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPartida)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxFormActual)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.iconPictureBoxFormActual);
-            this.panel1.Controls.Add(this.lblFrmActual);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(760, 69);
-            this.panel1.TabIndex = 19;
-            // 
-            // iconPictureBoxFormActual
-            // 
-            this.iconPictureBoxFormActual.BackColor = System.Drawing.Color.White;
-            this.iconPictureBoxFormActual.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(99)))), ((int)(((byte)(228)))));
-            this.iconPictureBoxFormActual.IconChar = FontAwesome.Sharp.IconChar.Table;
-            this.iconPictureBoxFormActual.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(99)))), ((int)(((byte)(228)))));
-            this.iconPictureBoxFormActual.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBoxFormActual.IconSize = 35;
-            this.iconPictureBoxFormActual.Location = new System.Drawing.Point(15, 17);
-            this.iconPictureBoxFormActual.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.iconPictureBoxFormActual.Name = "iconPictureBoxFormActual";
-            this.iconPictureBoxFormActual.Size = new System.Drawing.Size(35, 35);
-            this.iconPictureBoxFormActual.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.iconPictureBoxFormActual.TabIndex = 15;
-            this.iconPictureBoxFormActual.TabStop = false;
-            // 
-            // lblFrmActual
-            // 
-            this.lblFrmActual.AutoSize = true;
-            this.lblFrmActual.BackColor = System.Drawing.Color.White;
-            this.lblFrmActual.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFrmActual.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(99)))), ((int)(((byte)(228)))));
-            this.lblFrmActual.Location = new System.Drawing.Point(54, 22);
-            this.lblFrmActual.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblFrmActual.Name = "lblFrmActual";
-            this.lblFrmActual.Size = new System.Drawing.Size(190, 21);
-            this.lblFrmActual.TabIndex = 14;
-            this.lblFrmActual.Text = "Listado de la Partida";
-            this.lblFrmActual.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
@@ -119,6 +78,7 @@
             // 
             // dataGridViewPartida
             // 
+            this.dataGridViewPartida.BackgroundColor = System.Drawing.Color.LightBlue;
             this.dataGridViewPartida.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewPartida.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewPartida.Location = new System.Drawing.Point(8, 8);
@@ -210,6 +170,48 @@
             this.btnNuevoPart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNuevoPart.UseVisualStyleBackColor = false;
             // 
+            // lblFrmActual
+            // 
+            this.lblFrmActual.AutoSize = true;
+            this.lblFrmActual.BackColor = System.Drawing.Color.White;
+            this.lblFrmActual.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFrmActual.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(99)))), ((int)(((byte)(228)))));
+            this.lblFrmActual.Location = new System.Drawing.Point(54, 22);
+            this.lblFrmActual.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFrmActual.Name = "lblFrmActual";
+            this.lblFrmActual.Size = new System.Drawing.Size(190, 21);
+            this.lblFrmActual.TabIndex = 14;
+            this.lblFrmActual.Text = "Listado de la Partida";
+            this.lblFrmActual.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // iconPictureBoxFormActual
+            // 
+            this.iconPictureBoxFormActual.BackColor = System.Drawing.Color.White;
+            this.iconPictureBoxFormActual.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(99)))), ((int)(((byte)(228)))));
+            this.iconPictureBoxFormActual.IconChar = FontAwesome.Sharp.IconChar.Table;
+            this.iconPictureBoxFormActual.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(99)))), ((int)(((byte)(228)))));
+            this.iconPictureBoxFormActual.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBoxFormActual.IconSize = 35;
+            this.iconPictureBoxFormActual.Location = new System.Drawing.Point(15, 17);
+            this.iconPictureBoxFormActual.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.iconPictureBoxFormActual.Name = "iconPictureBoxFormActual";
+            this.iconPictureBoxFormActual.Size = new System.Drawing.Size(35, 35);
+            this.iconPictureBoxFormActual.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.iconPictureBoxFormActual.TabIndex = 15;
+            this.iconPictureBoxFormActual.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.iconPictureBoxFormActual);
+            this.panel1.Controls.Add(this.lblFrmActual);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(760, 69);
+            this.panel1.TabIndex = 19;
+            // 
             // FormPartida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -219,26 +221,24 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormPartida";
             this.ShowInTaskbar = false;
             this.Text = "FormPartida";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxFormActual)).EndInit();
+            this.Load += new System.EventHandler(this.FormPartida_Load);
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPartida)).EndInit();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxFormActual)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBoxFormActual;
-        private System.Windows.Forms.Label lblFrmActual;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.DataGridView dataGridViewPartida;
@@ -246,5 +246,8 @@
         private FontAwesome.Sharp.IconButton btnEliminarPart;
         private FontAwesome.Sharp.IconButton btnEditarPart;
         private FontAwesome.Sharp.IconButton btnNuevoPart;
+        private System.Windows.Forms.Label lblFrmActual;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBoxFormActual;
+        private System.Windows.Forms.Panel panel1;
     }
 }

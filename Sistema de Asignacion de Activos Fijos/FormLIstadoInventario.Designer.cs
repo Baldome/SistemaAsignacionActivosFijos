@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLIstadoInventario));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMinimizar = new FontAwesome.Sharp.IconButton();
             this.btnMaximizar = new FontAwesome.Sharp.IconButton();
@@ -36,17 +37,17 @@
             this.lblFrmActual = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.dataGridViewListadoEmpleados = new System.Windows.Forms.DataGridView();
             this.dataGridViewInventario = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnSeleccionar = new FontAwesome.Sharp.IconButton();
-            this.dataGridViewListadoEmpleados = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxFormActual)).BeginInit();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListadoEmpleados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInventario)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListadoEmpleados)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -177,6 +178,16 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(922, 412);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
+            // dataGridViewListadoEmpleados
+            // 
+            this.dataGridViewListadoEmpleados.BackgroundColor = System.Drawing.Color.LightBlue;
+            this.dataGridViewListadoEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewListadoEmpleados.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewListadoEmpleados.Location = new System.Drawing.Point(8, 209);
+            this.dataGridViewListadoEmpleados.Name = "dataGridViewListadoEmpleados";
+            this.dataGridViewListadoEmpleados.Size = new System.Drawing.Size(906, 195);
+            this.dataGridViewListadoEmpleados.TabIndex = 1;
+            // 
             // dataGridViewInventario
             // 
             this.dataGridViewInventario.BackgroundColor = System.Drawing.Color.LightBlue;
@@ -222,16 +233,6 @@
             this.btnSeleccionar.UseVisualStyleBackColor = false;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
-            // dataGridViewListadoEmpleados
-            // 
-            this.dataGridViewListadoEmpleados.BackgroundColor = System.Drawing.Color.LightBlue;
-            this.dataGridViewListadoEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewListadoEmpleados.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewListadoEmpleados.Location = new System.Drawing.Point(8, 209);
-            this.dataGridViewListadoEmpleados.Name = "dataGridViewListadoEmpleados";
-            this.dataGridViewListadoEmpleados.Size = new System.Drawing.Size(906, 195);
-            this.dataGridViewListadoEmpleados.TabIndex = 1;
-            // 
             // FormLIstadoInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -241,6 +242,7 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormLIstadoInventario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -251,9 +253,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxFormActual)).EndInit();
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListadoEmpleados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInventario)).EndInit();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListadoEmpleados)).EndInit();
             this.ResumeLayout(false);
 
         }

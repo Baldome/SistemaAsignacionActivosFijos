@@ -18,16 +18,21 @@ namespace Sistema_de_Asignacion_de_Activos_Fijos
         {
             InitializeComponent();
             conexionDB = new ConexionDB();
-            formEquiposAsignados = new FormEquiposAsignados();
         }
 
         private void btnBuscarAsignacion_Click(object sender, EventArgs e)
         {
+            formEquiposAsignados = new FormEquiposAsignados();
             formEquiposAsignados.btnMaximizar.Visible = true;
             formEquiposAsignados.btnSeleccionar.Visible = true;
             formEquiposAsignados.btnGenerarQR.Visible = false;
             
             formEquiposAsignados.ShowDialog();
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

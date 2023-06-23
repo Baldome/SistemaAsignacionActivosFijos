@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormResponsableOficina));
             this.panel1 = new System.Windows.Forms.Panel();
             this.iconPictureBoxFormActual = new FontAwesome.Sharp.IconPictureBox();
             this.lblFrmActual = new System.Windows.Forms.Label();
@@ -59,9 +60,9 @@
             // iconPictureBoxFormActual
             // 
             this.iconPictureBoxFormActual.BackColor = System.Drawing.Color.White;
-            this.iconPictureBoxFormActual.ForeColor = System.Drawing.Color.BurlyWood;
+            this.iconPictureBoxFormActual.ForeColor = System.Drawing.Color.SaddleBrown;
             this.iconPictureBoxFormActual.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
-            this.iconPictureBoxFormActual.IconColor = System.Drawing.Color.BurlyWood;
+            this.iconPictureBoxFormActual.IconColor = System.Drawing.Color.SaddleBrown;
             this.iconPictureBoxFormActual.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBoxFormActual.IconSize = 34;
             this.iconPictureBoxFormActual.Location = new System.Drawing.Point(15, 17);
@@ -77,7 +78,7 @@
             this.lblFrmActual.AutoSize = true;
             this.lblFrmActual.BackColor = System.Drawing.Color.White;
             this.lblFrmActual.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFrmActual.ForeColor = System.Drawing.Color.BurlyWood;
+            this.lblFrmActual.ForeColor = System.Drawing.Color.SaddleBrown;
             this.lblFrmActual.Location = new System.Drawing.Point(54, 22);
             this.lblFrmActual.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFrmActual.Name = "lblFrmActual";
@@ -117,6 +118,7 @@
             // 
             // dataGridViewResponsalblesOficina
             // 
+            this.dataGridViewResponsalblesOficina.BackgroundColor = System.Drawing.Color.LightBlue;
             this.dataGridViewResponsalblesOficina.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewResponsalblesOficina.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewResponsalblesOficina.Location = new System.Drawing.Point(8, 8);
@@ -167,9 +169,11 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormResponsableOficina";
             this.Text = "FormResponsableOficina";
+            this.Load += new System.EventHandler(this.FormResponsableOficina_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxFormActual)).EndInit();

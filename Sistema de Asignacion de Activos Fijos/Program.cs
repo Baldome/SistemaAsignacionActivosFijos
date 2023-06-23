@@ -16,7 +16,7 @@ namespace Sistema_de_Asignacion_de_Activos_Fijos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormPrincipal());
+            Application.Run(new FormLogin());
         }
     }
 }

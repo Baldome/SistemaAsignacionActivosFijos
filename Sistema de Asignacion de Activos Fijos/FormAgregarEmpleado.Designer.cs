@@ -28,30 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAgregarEmpleado));
             this.panel1 = new System.Windows.Forms.Panel();
             this.iconPictureBoxFormActual = new FontAwesome.Sharp.IconPictureBox();
             this.lblFrmActual = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnAgregar = new FontAwesome.Sharp.IconButton();
+            this.label13 = new System.Windows.Forms.Label();
             this.txtEmpleadoNumero = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.txtExpedido = new System.Windows.Forms.TextBox();
-            this.txtDireccionOficina = new System.Windows.Forms.TextBox();
             this.txtCargo = new System.Windows.Forms.TextBox();
+            this.txtDireccionOficina = new System.Windows.Forms.TextBox();
             this.txtAreaTrabajo = new System.Windows.Forms.TextBox();
             this.txtProfesion = new System.Windows.Forms.TextBox();
             this.txtCi = new System.Windows.Forms.TextBox();
@@ -61,7 +60,9 @@
             this.txtCelular = new System.Windows.Forms.TextBox();
             this.txtDepartamento = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.btnCancelar = new FontAwesome.Sharp.IconButton();
+            this.btnAgregar = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxFormActual)).BeginInit();
             this.panel2.SuspendLayout();
@@ -175,41 +176,16 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(752, 427);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // panel3
+            // label13
             // 
-            this.panel3.Controls.Add(this.btnCancelar);
-            this.panel3.Controls.Add(this.btnAgregar);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(4, 431);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(752, 80);
-            this.panel3.TabIndex = 6;
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(34)))), ((int)(((byte)(57)))));
-            this.btnAgregar.FlatAppearance.BorderSize = 0;
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
-            this.btnAgregar.IconColor = System.Drawing.Color.White;
-            this.btnAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAgregar.IconSize = 30;
-            this.btnAgregar.Location = new System.Drawing.Point(13, 15);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Padding = new System.Windows.Forms.Padding(6);
-            this.btnAgregar.Size = new System.Drawing.Size(150, 50);
-            this.btnAgregar.TabIndex = 5;
-            this.btnAgregar.Text = "   Agregar";
-            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAgregar.UseVisualStyleBackColor = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(78, 382);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(55, 16);
+            this.label13.TabIndex = 14;
+            this.label13.Text = "Usuario:";
             // 
             // txtEmpleadoNumero
             // 
@@ -265,17 +241,6 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Cargo:";
             // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(456, 144);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 16);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Oficina";
-            // 
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -286,6 +251,17 @@
             this.label6.Size = new System.Drawing.Size(59, 16);
             this.label6.TabIndex = 7;
             this.label6.Text = "Nombre:";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(456, 144);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(47, 16);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Oficina";
             // 
             // label7
             // 
@@ -353,17 +329,6 @@
             this.label12.TabIndex = 13;
             this.label12.Text = "Departamento:";
             // 
-            // label13
-            // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(78, 382);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(55, 16);
-            this.label13.TabIndex = 14;
-            this.label13.Text = "Usuario:";
-            // 
             // txtExpedido
             // 
             this.txtExpedido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -374,16 +339,6 @@
             this.txtExpedido.Size = new System.Drawing.Size(231, 25);
             this.txtExpedido.TabIndex = 15;
             // 
-            // txtDireccionOficina
-            // 
-            this.txtDireccionOficina.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDireccionOficina.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(34)))), ((int)(((byte)(57)))));
-            this.txtDireccionOficina.Location = new System.Drawing.Point(141, 199);
-            this.txtDireccionOficina.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtDireccionOficina.Name = "txtDireccionOficina";
-            this.txtDireccionOficina.Size = new System.Drawing.Size(231, 25);
-            this.txtDireccionOficina.TabIndex = 16;
-            // 
             // txtCargo
             // 
             this.txtCargo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -393,6 +348,16 @@
             this.txtCargo.Name = "txtCargo";
             this.txtCargo.Size = new System.Drawing.Size(231, 25);
             this.txtCargo.TabIndex = 17;
+            // 
+            // txtDireccionOficina
+            // 
+            this.txtDireccionOficina.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDireccionOficina.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(34)))), ((int)(((byte)(57)))));
+            this.txtDireccionOficina.Location = new System.Drawing.Point(141, 199);
+            this.txtDireccionOficina.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtDireccionOficina.Name = "txtDireccionOficina";
+            this.txtDireccionOficina.Size = new System.Drawing.Size(231, 25);
+            this.txtDireccionOficina.TabIndex = 16;
             // 
             // txtAreaTrabajo
             // 
@@ -484,6 +449,17 @@
             this.txtUsuario.Size = new System.Drawing.Size(231, 25);
             this.txtUsuario.TabIndex = 26;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnCancelar);
+            this.panel3.Controls.Add(this.btnAgregar);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(4, 431);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(752, 80);
+            this.panel3.TabIndex = 6;
+            // 
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -509,6 +485,31 @@
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(34)))), ((int)(((byte)(57)))));
+            this.btnAgregar.FlatAppearance.BorderSize = 0;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.Color.White;
+            this.btnAgregar.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
+            this.btnAgregar.IconColor = System.Drawing.Color.White;
+            this.btnAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAgregar.IconSize = 30;
+            this.btnAgregar.Location = new System.Drawing.Point(13, 15);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Padding = new System.Windows.Forms.Padding(6);
+            this.btnAgregar.Size = new System.Drawing.Size(150, 50);
+            this.btnAgregar.TabIndex = 5;
+            this.btnAgregar.Text = "   Agregar";
+            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
             // FormAgregarEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -518,6 +519,7 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormAgregarEmpleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

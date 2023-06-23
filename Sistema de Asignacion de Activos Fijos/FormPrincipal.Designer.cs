@@ -567,10 +567,13 @@
             // 
             // pictureBoxContenidoQR
             // 
-            this.pictureBoxContenidoQR.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxContenidoQR.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBoxContenidoQR.Location = new System.Drawing.Point(369, 24);
             this.pictureBoxContenidoQR.Name = "pictureBoxContenidoQR";
             this.pictureBoxContenidoQR.Size = new System.Drawing.Size(260, 260);
+            this.pictureBoxContenidoQR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxContenidoQR.TabIndex = 7;
             this.pictureBoxContenidoQR.TabStop = false;
             // 
@@ -806,9 +809,9 @@
         private System.Windows.Forms.PictureBox pictureBoxInicio;
         private System.Windows.Forms.Label labelTotalInventario;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBoxContenidoQR;
         private FontAwesome.Sharp.IconButton btnGenerarQR;
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.Panel panelContenedor;
+        public System.Windows.Forms.PictureBox pictureBoxContenidoQR;
     }
 }

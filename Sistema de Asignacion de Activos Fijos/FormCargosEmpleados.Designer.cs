@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCargosEmpleados));
             this.panel1 = new System.Windows.Forms.Panel();
             this.iconPictureBoxFormActual = new FontAwesome.Sharp.IconPictureBox();
             this.lblFrmActual = new System.Windows.Forms.Label();
@@ -117,6 +118,7 @@
             // 
             // dataGridViewListCargosEmp
             // 
+            this.dataGridViewListCargosEmp.BackgroundColor = System.Drawing.Color.LightBlue;
             this.dataGridViewListCargosEmp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewListCargosEmp.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewListCargosEmp.Location = new System.Drawing.Point(8, 8);
@@ -167,9 +169,11 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormCargosEmpleados";
             this.Text = "FormCargosEmpleados";
+            this.Load += new System.EventHandler(this.FormCargosEmpleados_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxFormActual)).EndInit();

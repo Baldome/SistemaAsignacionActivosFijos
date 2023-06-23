@@ -28,12 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAsignacion));
             this.iconPictureBoxFormActual = new FontAwesome.Sharp.IconPictureBox();
             this.lblFrmActual = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnMaximizar = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBoxEpleados = new System.Windows.Forms.GroupBox();
+            this.lblNumeroEmpleado = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -65,12 +69,9 @@
             this.txtResponsable = new System.Windows.Forms.TextBox();
             this.txtCargoResp = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnCancelar = new FontAwesome.Sharp.IconButton();
             this.btnGuardar = new FontAwesome.Sharp.IconButton();
             this.txtRubro = new CustomBox.RJControls.RJTextBox();
-            this.btnMaximizar = new FontAwesome.Sharp.IconButton();
-            this.btnCancelar = new FontAwesome.Sharp.IconButton();
-            this.lblNumeroEmpleado = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxFormActual)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -123,6 +124,24 @@
             this.panel1.Size = new System.Drawing.Size(760, 69);
             this.panel1.TabIndex = 14;
             // 
+            // btnMaximizar
+            // 
+            this.btnMaximizar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnMaximizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaximizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(34)))), ((int)(((byte)(57)))));
+            this.btnMaximizar.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
+            this.btnMaximizar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(34)))), ((int)(((byte)(57)))));
+            this.btnMaximizar.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnMaximizar.IconSize = 40;
+            this.btnMaximizar.Location = new System.Drawing.Point(706, 14);
+            this.btnMaximizar.Name = "btnMaximizar";
+            this.btnMaximizar.Size = new System.Drawing.Size(40, 40);
+            this.btnMaximizar.TabIndex = 18;
+            this.btnMaximizar.UseVisualStyleBackColor = true;
+            this.btnMaximizar.Visible = false;
+            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
@@ -170,6 +189,31 @@
             this.groupBoxEpleados.TabIndex = 2;
             this.groupBoxEpleados.TabStop = false;
             this.groupBoxEpleados.Text = "Empleados";
+            // 
+            // lblNumeroEmpleado
+            // 
+            this.lblNumeroEmpleado.AutoSize = true;
+            this.lblNumeroEmpleado.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumeroEmpleado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblNumeroEmpleado.Location = new System.Drawing.Point(349, 1);
+            this.lblNumeroEmpleado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNumeroEmpleado.Name = "lblNumeroEmpleado";
+            this.lblNumeroEmpleado.Size = new System.Drawing.Size(18, 19);
+            this.lblNumeroEmpleado.TabIndex = 10;
+            this.lblNumeroEmpleado.Text = "0";
+            this.lblNumeroEmpleado.Visible = false;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label15.Location = new System.Drawing.Point(123, 2);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(224, 16);
+            this.label15.TabIndex = 9;
+            this.label15.Text = "Número del Empleado Seleccionado:";
+            this.label15.Visible = false;
             // 
             // tableLayoutPanel3
             // 
@@ -573,6 +617,31 @@
             this.panel3.Size = new System.Drawing.Size(752, 80);
             this.panel3.TabIndex = 6;
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(34)))), ((int)(((byte)(57)))));
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.Xmark;
+            this.btnCancelar.IconColor = System.Drawing.Color.White;
+            this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCancelar.IconSize = 30;
+            this.btnCancelar.Location = new System.Drawing.Point(153, 15);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Padding = new System.Windows.Forms.Padding(4);
+            this.btnCancelar.Size = new System.Drawing.Size(140, 50);
+            this.btnCancelar.TabIndex = 7;
+            this.btnCancelar.Text = "   Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // btnGuardar
             // 
             this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -621,74 +690,6 @@
             this.txtRubro.Texts = "";
             this.txtRubro.UnderlinedStyle = false;
             // 
-            // btnMaximizar
-            // 
-            this.btnMaximizar.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnMaximizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaximizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(34)))), ((int)(((byte)(57)))));
-            this.btnMaximizar.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
-            this.btnMaximizar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(34)))), ((int)(((byte)(57)))));
-            this.btnMaximizar.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnMaximizar.IconSize = 40;
-            this.btnMaximizar.Location = new System.Drawing.Point(706, 14);
-            this.btnMaximizar.Name = "btnMaximizar";
-            this.btnMaximizar.Size = new System.Drawing.Size(40, 40);
-            this.btnMaximizar.TabIndex = 18;
-            this.btnMaximizar.UseVisualStyleBackColor = true;
-            this.btnMaximizar.Visible = false;
-            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(34)))), ((int)(((byte)(57)))));
-            this.btnCancelar.FlatAppearance.BorderSize = 0;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.Xmark;
-            this.btnCancelar.IconColor = System.Drawing.Color.White;
-            this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCancelar.IconSize = 30;
-            this.btnCancelar.Location = new System.Drawing.Point(153, 15);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Padding = new System.Windows.Forms.Padding(4);
-            this.btnCancelar.Size = new System.Drawing.Size(140, 50);
-            this.btnCancelar.TabIndex = 7;
-            this.btnCancelar.Text = "   Cancelar";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // lblNumeroEmpleado
-            // 
-            this.lblNumeroEmpleado.AutoSize = true;
-            this.lblNumeroEmpleado.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumeroEmpleado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblNumeroEmpleado.Location = new System.Drawing.Point(349, 1);
-            this.lblNumeroEmpleado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblNumeroEmpleado.Name = "lblNumeroEmpleado";
-            this.lblNumeroEmpleado.Size = new System.Drawing.Size(18, 19);
-            this.lblNumeroEmpleado.TabIndex = 10;
-            this.lblNumeroEmpleado.Text = "0";
-            this.lblNumeroEmpleado.Visible = false;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label15.Location = new System.Drawing.Point(123, 2);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(224, 16);
-            this.label15.TabIndex = 9;
-            this.label15.Text = "Número del Empleado Seleccionado:";
-            this.label15.Visible = false;
-            // 
             // FormAsignacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -700,6 +701,7 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormAsignacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAsignacion";

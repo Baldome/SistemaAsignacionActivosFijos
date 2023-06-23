@@ -224,6 +224,7 @@
             this.txtUnidad.Location = new System.Drawing.Point(89, 118);
             this.txtUnidad.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtUnidad.Name = "txtUnidad";
+            this.txtUnidad.ReadOnly = true;
             this.txtUnidad.Size = new System.Drawing.Size(153, 25);
             this.txtUnidad.TabIndex = 7;
             // 
@@ -245,6 +246,7 @@
             this.txtOficinaEmp.Location = new System.Drawing.Point(579, 31);
             this.txtOficinaEmp.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtOficinaEmp.Name = "txtOficinaEmp";
+            this.txtOficinaEmp.ReadOnly = true;
             this.txtOficinaEmp.Size = new System.Drawing.Size(153, 25);
             this.txtOficinaEmp.TabIndex = 5;
             // 
@@ -255,6 +257,7 @@
             this.txtCargoEmp.Location = new System.Drawing.Point(335, 31);
             this.txtCargoEmp.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtCargoEmp.Name = "txtCargoEmp";
+            this.txtCargoEmp.ReadOnly = true;
             this.txtCargoEmp.Size = new System.Drawing.Size(151, 25);
             this.txtCargoEmp.TabIndex = 4;
             // 
@@ -276,6 +279,7 @@
             this.txtNombre.Location = new System.Drawing.Point(89, 31);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtNombre.Name = "txtNombre";
+            this.txtNombre.ReadOnly = true;
             this.txtNombre.Size = new System.Drawing.Size(153, 25);
             this.txtNombre.TabIndex = 0;
             // 
@@ -308,6 +312,7 @@
             this.txtAreaTrabajo.Location = new System.Drawing.Point(335, 118);
             this.txtAreaTrabajo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtAreaTrabajo.Name = "txtAreaTrabajo";
+            this.txtAreaTrabajo.ReadOnly = true;
             this.txtAreaTrabajo.Size = new System.Drawing.Size(151, 25);
             this.txtAreaTrabajo.TabIndex = 8;
             // 
@@ -318,6 +323,7 @@
             this.txtProfesion.Location = new System.Drawing.Point(579, 118);
             this.txtProfesion.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtProfesion.Name = "txtProfesion";
+            this.txtProfesion.ReadOnly = true;
             this.txtProfesion.Size = new System.Drawing.Size(153, 25);
             this.txtProfesion.TabIndex = 9;
             // 
@@ -419,6 +425,7 @@
             this.txtEstado.Location = new System.Drawing.Point(89, 118);
             this.txtEstado.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtEstado.Name = "txtEstado";
+            this.txtEstado.ReadOnly = true;
             this.txtEstado.Size = new System.Drawing.Size(153, 25);
             this.txtEstado.TabIndex = 7;
             // 
@@ -440,6 +447,7 @@
             this.txtOficina.Location = new System.Drawing.Point(579, 31);
             this.txtOficina.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtOficina.Name = "txtOficina";
+            this.txtOficina.ReadOnly = true;
             this.txtOficina.Size = new System.Drawing.Size(153, 25);
             this.txtOficina.TabIndex = 5;
             // 
@@ -450,6 +458,7 @@
             this.txtAuxiliar.Location = new System.Drawing.Point(335, 31);
             this.txtAuxiliar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtAuxiliar.Name = "txtAuxiliar";
+            this.txtAuxiliar.ReadOnly = true;
             this.txtAuxiliar.Size = new System.Drawing.Size(151, 25);
             this.txtAuxiliar.TabIndex = 4;
             // 
@@ -471,6 +480,7 @@
             this.txtRubros.Location = new System.Drawing.Point(89, 31);
             this.txtRubros.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtRubros.Name = "txtRubros";
+            this.txtRubros.ReadOnly = true;
             this.txtRubros.Size = new System.Drawing.Size(153, 25);
             this.txtRubros.TabIndex = 0;
             // 
@@ -503,6 +513,7 @@
             this.txtResponsable.Location = new System.Drawing.Point(335, 118);
             this.txtResponsable.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtResponsable.Name = "txtResponsable";
+            this.txtResponsable.ReadOnly = true;
             this.txtResponsable.Size = new System.Drawing.Size(151, 25);
             this.txtResponsable.TabIndex = 8;
             // 
@@ -513,6 +524,7 @@
             this.txtCargoResp.Location = new System.Drawing.Point(579, 118);
             this.txtCargoResp.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtCargoResp.Name = "txtCargoResp";
+            this.txtCargoResp.ReadOnly = true;
             this.txtCargoResp.Size = new System.Drawing.Size(153, 25);
             this.txtCargoResp.TabIndex = 9;
             // 
@@ -545,10 +557,11 @@
             this.btnGuardar.Padding = new System.Windows.Forms.Padding(6);
             this.btnGuardar.Size = new System.Drawing.Size(207, 50);
             this.btnGuardar.TabIndex = 5;
-            this.btnGuardar.Text = "   Devolver Asignación";
+            this.btnGuardar.Text = "   Aceptar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // FormDevolucion
             // 
@@ -584,7 +597,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBoxFormActual;
-        private System.Windows.Forms.Label lblFrmActual;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel3;
@@ -593,30 +605,31 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtUnidad;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtOficinaEmp;
-        private System.Windows.Forms.TextBox txtCargoEmp;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtAreaTrabajo;
-        private System.Windows.Forms.TextBox txtProfesion;
         private System.Windows.Forms.GroupBox groupBoxEquipo;
         private FontAwesome.Sharp.IconButton btnBuscarAsignacion;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtOficina;
-        private System.Windows.Forms.TextBox txtAuxiliar;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtRubros;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtResponsable;
-        private System.Windows.Forms.TextBox txtCargoResp;
+        public System.Windows.Forms.TextBox txtUnidad;
+        public System.Windows.Forms.TextBox txtOficinaEmp;
+        public System.Windows.Forms.TextBox txtCargoEmp;
+        public System.Windows.Forms.TextBox txtNombre;
+        public System.Windows.Forms.TextBox txtAreaTrabajo;
+        public System.Windows.Forms.TextBox txtProfesion;
+        public System.Windows.Forms.TextBox txtEstado;
+        public System.Windows.Forms.TextBox txtOficina;
+        public System.Windows.Forms.TextBox txtAuxiliar;
+        public System.Windows.Forms.TextBox txtRubros;
+        public System.Windows.Forms.TextBox txtResponsable;
+        public System.Windows.Forms.TextBox txtCargoResp;
+        public System.Windows.Forms.Label lblFrmActual;
     }
 }

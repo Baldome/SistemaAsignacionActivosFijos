@@ -95,5 +95,32 @@ namespace Sistema_de_Asignacion_de_Activos_Fijos
                 MessageBox.Show("Por favor seleccione una fila.");
             }
         }
+
+        private void btnEditarEmp_Click(object sender, EventArgs e)
+        {
+            FormActualizarEmpleado formActualizarEmpleado = new FormActualizarEmpleado();
+            if (dataGridViewEmpleados.SelectedRows.Count > 0)
+            {
+                formActualizarEmpleado.txtEmpleadoNumero.Text = dataGridViewEmpleados.CurrentRow.Cells["EMP_NO"].Value.ToString();
+                formActualizarEmpleado.txtCi.Text = dataGridViewEmpleados.CurrentRow.Cells["CI"].Value.ToString();
+                formActualizarEmpleado.txtExpedido.Text = dataGridViewEmpleados.CurrentRow.Cells["EXP"].Value.ToString();
+                formActualizarEmpleado.txtNombre.Text = dataGridViewEmpleados.CurrentRow.Cells["NOMBRE"].Value.ToString();
+                formActualizarEmpleado.txtCargo.Text = dataGridViewEmpleados.CurrentRow.Cells["CARGO"].Value.ToString();
+                formActualizarEmpleado.txtOficina.Text = dataGridViewEmpleados.CurrentRow.Cells["OFICINA"].Value.ToString();
+                formActualizarEmpleado.txtDireccionOficina.Text = dataGridViewEmpleados.CurrentRow.Cells["DIR_OFI"].Value.ToString();
+                formActualizarEmpleado.txtUnidad.Text = dataGridViewEmpleados.CurrentRow.Cells["UNIDAD"].Value.ToString();
+                formActualizarEmpleado.txtAreaTrabajo.Text = dataGridViewEmpleados.CurrentRow.Cells["AREA_TRAB"].Value.ToString();
+                formActualizarEmpleado.txtCelular.Text = dataGridViewEmpleados.CurrentRow.Cells["CELULAR"].Value.ToString();
+                formActualizarEmpleado.txtProfesion.Text = dataGridViewEmpleados.CurrentRow.Cells["PROFESION"].Value.ToString();
+                formActualizarEmpleado.txtDepartamento.Text = dataGridViewEmpleados.CurrentRow.Cells["DPTO"].Value.ToString();
+                formActualizarEmpleado.txtUsuario.Text = dataGridViewEmpleados.CurrentRow.Cells["USUARIO"].Value.ToString();
+
+                formActualizarEmpleado.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Por favor seleccione una fila.");
+            }
+        }
     }
 }

@@ -17,12 +17,12 @@ namespace Sistema_de_Asignacion_de_Activos_Fijos
 
         private ConexionDB conexionDB;
         private SqlConnection connection;
+        private FormEmpleados formEmpleados;
 
         public FormAgregarEmpleado()
         {
             InitializeComponent();
             conexionDB = new ConexionDB();
-            connection = conexionDB.getConexion();
         }
 
         //este codigo tendra la funcionalidad de arrastrar el formulario
@@ -35,7 +35,6 @@ namespace Sistema_de_Asignacion_de_Activos_Fijos
         {
             try
             {
-                connection.Open();
                 string emp_no = txtEmpleadoNumero.Text;
                 string ci = txtCi.Text;
                 string exp = txtExpedido.Text;
@@ -54,8 +53,9 @@ namespace Sistema_de_Asignacion_de_Activos_Fijos
                     "AREA_TRAB, CELULAR, PROFESION, DPTO, USUARIO) VALUES (@EmpNo, @Ci, @Exp, @Nombre, @Cargo, " +
                     "@Oficina, @DirOfi, @Unidad, @AreaTrab, @Celular, @Profesion, @Dpto, @Usuario)";
 
-                using (connection)
+                using (connection = conexionDB.getConexion())
                 {
+                    connection.Open();
                     SqlCommand command = new SqlCommand(query, connection);
                     command.Parameters.AddWithValue("@EmpNo", emp_no);
                     command.Parameters.AddWithValue("@Ci", ci);
@@ -104,6 +104,8 @@ namespace Sistema_de_Asignacion_de_Activos_Fijos
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+            formEmpleados = new FormEmpleados();
+            formEmpleados.cargarDatos();
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
